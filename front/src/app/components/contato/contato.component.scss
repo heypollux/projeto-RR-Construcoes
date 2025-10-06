@@ -1,180 +1,3 @@
-/* -------------------------------------------------------------------------- */
-/* Estilos do Container Principal (body wrapper) */
-/* Se refere ao div principal que engloba todo o conteúdo da página */
-.main-container {
-    position: relative;
-    /* Para posicionamento de elementos filhos */
-    display: flex;
-    /* Layout flexível para organizar o conteúdo */
-    height: auto;
-    /* Altura automática */
-    min-height: 100vh;
-    /* Garante que ocupe a altura total da viewport */
-    width: 100%;
-    /* Ocupa a largura total */
-    flex-direction: column;
-    /* Itens empilhados verticalmente */
-    background-color: #15191e;
-    /* Cor de fundo escura */
-    overflow-x: hidden;
-    /* Evita rolagem horizontal indesejada */
-}
-
-/* -------------------------------------------------------------------------- */
-/* Estilos do Layout Container */
-/* Se refere ao container que centraliza e gerencia o layout geral dentro do main-container */
-.layout-container {
-    display: flex;
-    /* Layout flexível */
-    height: 100%;
-    /* Ocupa a altura total do pai */
-    flex-grow: 1;
-    /* Permite que cresça para preencher o espaço disponível */
-    flex-direction: column;
-    /* Itens empilhados verticalmente */
-}
-
-/* -------------------------------------------------------------------------- */
-/* Estilos do Cabeçalho (Header) */
-/* Se refere à barra superior da página que contém a logo e a navegação */
-.main-header {
-    display: flex;
-    /* Layout flexível */
-    align-items: center;
-    /* Alinha itens verticalmente ao centro */
-    justify-content: space-between;
-    /* Espaço entre os itens (logo e navegação) */
-    white-space: nowrap;
-    /* Evita quebra de linha em elementos como links */
-    border-bottom: 1px solid #2c353f;
-    /* Borda inferior sutil */
-    padding: 12px 40px;
-    /* Padding vertical e horizontal */
-}
-
-/* Estilos da seção da logo no cabeçalho */
-.header-logo-section {
-    display: flex;
-    /* Layout flexível */
-    align-items: center;
-    /* Alinha itens verticalmente */
-    gap: 16px;
-    /* Espaço entre o ícone e o título */
-    color: white;
-    /* Cor do texto e ícone */
-}
-
-/* Estilos do ícone SVG da logo */
-.logo-icon {
-    width: 16px;
-    /* Largura do ícone */
-    height: 16px;
-    /* Altura do ícone */
-}
-
-/* Estilos do título da empresa no cabeçalho */
-.company-title {
-    color: white;
-    /* Cor do texto */
-    font-size: 18px;
-    /* Tamanho da fonte */
-    font-weight: bold;
-    /* Negrito */
-    line-height: 1.25;
-    /* Espaçamento entre linhas */
-    letter-spacing: -0.015em;
-    /* Ajuste de espaçamento entre caracteres */
-}
-
-/* Estilos da seção de navegação no cabeçalho */
-.header-nav-section {
-    display: flex;
-    /* Layout flexível */
-    flex: 1;
-    /* Permite que cresça para preencher o espaço */
-    justify-content: flex-end;
-    /* Alinha o conteúdo à direita */
-    gap: 32px;
-    /* Espaço entre os grupos de itens (links e botão) */
-}
-
-/* Estilos dos links de navegação */
-.main-nav-links {
-    display: flex;
-    /* Layout flexível */
-    align-items: center;
-    /* Alinha itens verticalmente */
-    gap: 36px;
-    /* Espaço entre os links */
-}
-
-/* Estilos de cada link individual */
-.nav-link {
-    color: white;
-    /* Cor do texto */
-    font-size: 14px;
-    /* Tamanho da fonte */
-    font-weight: 500;
-    /* Peso da fonte (médio) */
-    line-height: normal;
-    /* Espaçamento entre linhas normal */
-    text-decoration: none;
-    /* Remove sublinhado padrão */
-    transition: color 0.3s ease;
-    /* Transição suave para hover */
-}
-
-.nav-link:hover {
-    color: #9facbc;
-    /* Cor ao passar o mouse */
-}
-
-/* Estilos do botão "Solicitar Orçamento" */
-.quote-button {
-    display: flex;
-    /* Layout flexível */
-    min-width: 84px;
-    /* Largura mínima */
-    max-width: 480px;
-    /* Largura máxima */
-    cursor: pointer;
-    /* Cursor de ponteiro ao passar o mouse */
-    align-items: center;
-    /* Alinha itens verticalmente */
-    justify-content: center;
-    /* Centraliza o texto */
-    overflow: hidden;
-    /* Oculta conteúdo que transborda */
-    border-radius: 8px;
-    /* Cantos arredondados */
-    height: 40px;
-    /* Altura do botão */
-    padding: 0 16px;
-    /* Padding interno */
-    background-color: #182a3f;
-    /* Cor de fundo escura */
-    color: white;
-    /* Cor do texto */
-    font-size: 14px;
-    /* Tamanho da fonte */
-    font-weight: bold;
-    /* Negrito */
-    line-height: normal;
-    /* Espaçamento entre linhas normal */
-    letter-spacing: 0.015em;
-    /* Espaçamento entre caracteres */
-    border: none;
-    /* Remove borda padrão */
-    transition: background-color 0.3s ease;
-    /* Transição suave para hover */
-}
-
-.quote-button:hover {
-    background-color: #2c353f;
-    /* Cor de fundo ao passar o mouse */
-}
-
-/* -------------------------------------------------------------------------- */
 /* Estilos do Conteúdo Principal da Página (formulário e informações) */
 /* Se refere à área central da página de contato */
 .content-wrapper {
@@ -244,91 +67,47 @@
 
 /* -------------------------------------------------------------------------- */
 /* Estilos do Formulário */
-/* Se refere aos campos de entrada de dados e botões do formulário */
 .form-field-group {
     display: flex;
-    /* Layout flexível */
     max-width: 480px;
-    /* Largura máxima para o grupo de campos */
     flex-wrap: wrap;
-    /* Permite quebra de linha */
     align-items: flex-end;
-    /* Alinha itens ao final */
     gap: 16px;
-    /* Espaço entre os campos */
     padding: 12px 16px;
-    /* Padding */
 }
 
 /* Estilos do rótulo e campo de entrada agrupados */
 .form-label-group {
     display: flex;
-    /* Layout flexível */
     flex-direction: column;
-    /* Itens empilhados verticalmente */
     min-width: 160px;
-    /* Largura mínima */
     flex: 1;
-    /* Permite que cresça */
 }
 
 /* Estilos do texto do rótulo (Nome, Email, etc.) */
 .form-label {
-    color: white;
-    /* Cor do texto */
+    color: var(--caramelo);
     font-size: 16px;
-    /* Tamanho da fonte */
-    font-weight: 500;
-    /* Peso da fonte médio */
+    font-weight: 300;
     line-height: normal;
-    /* Espaçamento entre linhas normal */
     padding-bottom: 8px;
-    /* Espaço abaixo do rótulo */
+
 }
 
 /* Estilos para os campos de entrada de texto (input) */
 .form-input-field {
     display: flex;
-    /* Layout flexível */
-    width: 100%;
-    /* Ocupa 100% da largura disponível */
-    min-width: 0;
-    /* Largura mínima 0 */
-    flex: 1;
-    /* Permite que cresça */
-    resize: none;
-    /* Não permite redimensionamento */
-    overflow: hidden;
-    /* Oculta conteúdo que transborda */
-    border-radius: 8px;
-    /* Cantos arredondados */
-    color: white;
-    /* Cor do texto digitado */
-    outline: 0;
-    /* Remove outline ao focar */
-    border: none;
-    /* Remove borda */
-    background-color: #2c353f;
-    /* Cor de fundo do campo */
     height: 56px;
-    /* Altura do campo */
     padding: 16px;
-    /* Padding interno */
-    font-size: 16px;
-    /* Tamanho da fonte */
-    font-weight: normal;
-    /* Peso da fonte normal */
-    line-height: normal;
-    /* Espaçamento entre linhas normal */
+    align-items: center;
+    align-self: stretch;
+    border-radius: 8px;
 }
 
 /* Estilos para o placeholder dos campos de entrada */
 .form-input-field::placeholder {
-    color: #9facbc;
-    /* Cor do placeholder */
+    color: var(--decembersky);
 }
-
-/* Estilos para o campo de área de texto (textarea) */
 .form-textarea-field {
     display: flex;
     min-height: 144px;
@@ -336,14 +115,13 @@
     align-items: flex-start;
     flex: 1 0 0;
     align-self: stretch;
+    border-radius: 8px;
 }
 
 /* Estilos para a área de inserir texto */
 .form-textarea-field::placeholder {
-    color: #9facbc;
+    color: var(--decembersky);
 }
-
-/* Botão de envio do formulário */
 .form-submit-button-group {
     display: flex;
     width: 136px;
@@ -355,9 +133,10 @@
     align-items: center;
 }
 
+/* -------------------------------------------------------------------------- */
 /* Estilos da Seção de Informações de Contato */
 .info-title {
-    color: white;
+    color: var(--caramelo);
     font-size: 22px;
     font-weight: bold;
     line-height: 1.25;
@@ -366,7 +145,7 @@
 }
 
 .info-text {
-    color: white;
+    color: var(--ouro-velho);
     font-size: 16px;
     font-weight: normal;
     line-height: normal;

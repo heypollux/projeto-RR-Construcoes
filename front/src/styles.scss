@@ -1,27 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+// cores principais:
+--cor-principal: #DDE6ED; 
+--cinza-claro: #7D8491;
+--azul-negro: #1A1D29;
+
+// cores widgets:
+--azul-escuro: #112E4A;
+--azul-claro: #6386AC;
+
+// cores do footer:
+--cor-secundária: #acbbc7;
+
+background-color: var(--cor-principal);
+}
+
 * {
     margin: 0;
     padding: 0;
     /* Garante que o texto seja legível em navegadores modernos */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    
 }
-:root {
-// cores escuras da marca:
---cor-principal: var(#1A2B3F);
---azul-2: var(#1C2D5E);
---azul-1: var(#284574);
-
-// cores clara da marca:
---seashel: var(#FFF5EE);
---ouro-velho: var(#AC9055);
---caramelo: var(#D2A047);
-
-// cores essenciais:
---branco: var(#FFFFFF);
---preto: var(#000000);
---decembersky: var(#D5D7D9);
-
 
 //fontes padrão:
 .josefin-sans { //titulos
@@ -34,6 +35,5 @@
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-}
 }
 
