@@ -4,8 +4,9 @@
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
-    border-bottom: 1px solid #f0f2f4;
+    border-bottom: 1px solid var(--cinza-claro);
     padding: 12px 40px;
+
 }
 
 /* Estilos da seção da logo no cabeçalho */
@@ -13,83 +14,68 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    color: #111417;
-    width: 16px;
-    height: 16px;
+    color: var(--azul-escuro);
+    width: 200px;
+    height: 50px;
 }
 
 /* Estilos do título da empresa no cabeçalho */
 .company-title {
-    color: #111417;
-    /* Cor do texto (escuro) */
+    color: var(--azul-escuro);
+    font-feature-settings: 'dlig' on;
     font-size: 18px;
-    /* Tamanho da fonte */
-    font-weight: bold;
-    /* Negrito */
-    line-height: 1.25;
-    /* Espaçamento entre linhas */
-    letter-spacing: -0.015em;
-    /* Ajuste de espaçamento entre caracteres */
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    /* 127.778% */
 }
 
 /* Estilos da seção de navegação no cabeçalho */
 .header-nav-section {
     display: flex;
-    /* Layout flexível */
-    flex: 1;
-    /* Permite que cresça para preencher o espaço */
     justify-content: flex-end;
-    /* Alinha o conteúdo à direita */
+    align-items: flex-start;
     gap: 32px;
-    /* Espaço entre os grupos de itens (links e botão) */
+    flex: 1 0 0;
 }
 
 /* Estilos dos links de navegação */
 .main-nav-links {
     display: flex;
-    /* Layout flexível */
+    height: 40px;
     align-items: center;
-    /* Alinha itens verticalmente */
     gap: 36px;
-    /* Espaço entre os links */
 }
 
 /* Estilos de cada link individual */
 .nav-link {
-    color: #111417;
-    /* Cor do texto (escuro) */
+    color: var(--azul-escuro);
     font-size: 14px;
-    /* Tamanho da fonte */
     font-weight: 500;
-    /* Peso da fonte (médio) */
     line-height: normal;
-    /* Espaçamento entre linhas normal */
     text-decoration: none;
-    /* Remove sublinhado padrão */
-    transition: color 0.3s ease;
-    /* Transição suave para hover */
+    transition: 300ms;
 }
 
 .nav-link:hover {
-    color: #0c2f55;
-    /* Cor ao passar o mouse */
+    color: var(--cinza-claro);
 }
 
 /* Estilos do botão "Solicitar Orçamento" */
 .quote-button {
     display: flex;
     height: 40px;
-    min-width: 84px;
-    max-width: 480px;
+    min-width: 100px;
+    max-width: 600px;
+    margin-left: 32px;
     padding: 0 16px;
+    gap: 32px;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    color: var(--cor-principal);
     background: var(--azul-escuro);
-    border: none;
-    font-style: bold;
-    font-size: medium;
+    color: var(--cor-principal);
+
     cursor: pointer;
 }
 
