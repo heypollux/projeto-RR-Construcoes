@@ -7,7 +7,7 @@
     <div class="contact-title-section">
         <p class="contact-title">Entre em contato</p>
     </div>
-
+    
     <div class="contact-description">
         <p>
             Estamos aqui para ajudar com suas necessidades de construção.
@@ -18,7 +18,7 @@
     <div class="form-field-group">
         <label>
             <p class="form-label">Nome</p>
-            <input placeholder="Seu nome" class="form-input-field" value="" />
+            <input [(ngModel)]="contato.nome" placeholder="Seu nome" class="form-input-field" value="" />
         </label>
     </div>
 
@@ -39,12 +39,12 @@
     <div class="form-field-group">
         <label>
             <p class="form-label">Mensagem</p>
-            <textarea placeholder="Sua mensagem" class="form-textarea-field"></textarea>
+            <textarea [(ngModel)]="contato.mensagem" placeholder="Sua mensagem" class="form-textarea-field"></textarea>
         </label>
     </div>
 
     <div class="form-submit-button-group">
-        <button class="quote-button">
+        <button (click)="enviarWhatsapp()" class="quote-button">
             <span class="truncate">Enviar</span>
         </button>
     </div>

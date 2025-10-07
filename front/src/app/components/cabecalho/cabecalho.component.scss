@@ -75,11 +75,13 @@
     border-radius: 8px;
     background: var(--azul-escuro);
     color: var(--cor-principal);
+    transition: 300ms;
 
     cursor: pointer;
 }
 
 .quote-button:hover {
     background-color: var(--cinza-claro);
-    text-decoration: underline;
+    color: var(--azul-escuro);
+    border: 1px solid var(--azul-escuro);
 }
