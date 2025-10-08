@@ -10,7 +10,7 @@ import ContatoMessage from 'src/app/classes/ContatoMessage';
 export class ContatoComponent {
   constructor(private toastr: ToastrService) {}
 
-  numeroTelefone: string = '5511952924797';
+  numeroTelefone: string = '+55 (11) 95292-4797';
 
   contato: ContatoMessage = new ContatoMessage();
 
@@ -32,10 +32,12 @@ export class ContatoComponent {
 
     this.contato = new ContatoMessage();
 
+    this.toastr.success('Mensagem enviada com sucesso!', 'Sucesso');
+
   }
 
   validarInput(input: string, mensagemErro: string): boolean {
-    if (!input || input.trim() == '') {
+    if (!input || input.trim() === '') {
       this.toastr.error(mensagemErro, 'Erro');
       return false;
     }

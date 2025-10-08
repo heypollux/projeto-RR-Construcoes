@@ -1,39 +1,28 @@
 <app-cabecalho></app-cabecalho>
 
 <main>
-    <div class="content-wrapper"></div>
-    <div class="content-container"></div>
+
+    <div class="content-wrapper">
+    <div class="coluna-metade">
 
     <div class="contact-title-section">
         <p class="contact-title">Entre em contato</p>
     </div>
-    
+
     <div class="contact-description">
         <p>
-            Estamos aqui para ajudar com suas necessidades de construção.
-            Entre em contato conosco para discutir seu projeto ou solicitar um orçamento.
+        Estamos aqui para ajudar com suas necessidades de construção e reforma!
+        <br>
+        Entre em contato conosco através do formulário abaixo ou use as informações de contato fornecidas.
         </p>
     </div>
 
+    <form>
     <div class="form-field-group">
-        <label>
-            <p class="form-label">Nome</p>
-            <input [(ngModel)]="contato.nome" placeholder="Seu nome" class="form-input-field" value="" />
-        </label>
-    </div>
-
-    <div class="form-field-group">
-        <label>
-            <p class="form-label">Email</p>
-            <input placeholder="Seu email" class="form-input-field" value="" />
-        </label>
-    </div>
-
-    <div class="form-field-group">
-        <label>
-            <p class="form-label">Telefone</p>
-            <input placeholder="Seu telefone" class="form-input-field" value="" />
-        </label>
+    <label>
+        <p class="form-label">Nome</p>
+        <input [(ngModel)]="contato.nome" placeholder="Seu nome" class="form-input-field" value="" />
+    </label>
     </div>
 
     <div class="form-field-group">
@@ -48,13 +37,37 @@
             <span class="truncate">Enviar</span>
         </button>
     </div>
+    </form>
+    </div>
+    
+    <div class="coluna-metade info-mapa-coluna">
 
     <div class="divider">
-    <h2 class="info-title">Informações de contato</h2>
+         <h2 class="info-title">Outras formas de contato</h2>
     </div>
+
+    <div class="info-description">
+        <p>Se preferir, você pode nos contatar diretamente através dos seguintes meios:</p>
+    </div>
+
     <div class="info-text">
-        <p>Endereço: Taboão da Serra, SP - Brasil</p>
-        <p>Telefone: (11) 95292-4797</p>
-        <p>Email: contato@constructco.com.br</p>
+        <p><strong>Endereço:</strong> Av. Gales, 200 - Vila Bela, Franco da Rocha - SP, 07847-070</p>
+        <p><strong>Telefone:</strong> (11) 9529-24797</p>
+        <p><strong>Email:</strong> rr.constrcoes3103@gmail.com</p>
+    </div>
+
+    <div class="mapa-container">
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.634303490769!2d-46.73461168502101!3d-23.3646489847374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a5b8b0e4d7b%3A0x8c8e4e8e4e8e4e8e!2sAv.%20Gales%2C%20200%20-%20Vila%20Bela%2C%20Franco%20da%20Rocha%20-%20SP%2C%2007847-070!5e0!3m2!1spt-BR!2sbr!4v1701301234567!5m2!1spt-BR!2sbr"
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    </div>
     </div>
 </main>
