@@ -9,13 +9,15 @@ import { CabecalhoComponent } from './components/cabecalho/cabecalho.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { RodapeComponent } from './components/rodape/rodape.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ContatoComponent,
-    CabecalhoComponent
+    CabecalhoComponent,
+    RodapeComponent
   ],
   imports: [
     BrowserModule,
