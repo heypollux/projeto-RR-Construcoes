@@ -1,16 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
 // cores principais:
---cor-principal: #f1f5fc; 
+--cor-principal: #fefbf6; 
 --cinza-claro: #e6e6e6;
 --azul-negro: #1A1D29;
 
 // cores widgets:
 --azul-escuro: #16324d;
---azul-claro: #637587;
+--azul-claro: #58748f;
 
-// cores do footer:
---cor-secundária: #a2a2a4;
+// cores do footer e header:
+--cor-secundaria: #faf8f5;
 
 background-color: var(--cor-principal);
 }

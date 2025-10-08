@@ -5,9 +5,11 @@
     box-sizing: border-box;
 }
 
-.main-footer {
-    background-color: #333;
-    color: var(--azul-negro);
-    text-align: center;
-    padding: 20px 0;
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--cor-principal);
+    background-color: var(--cor-secundaria);
+    color: var(--azul-escuro);
 }
