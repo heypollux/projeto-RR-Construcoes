@@ -8,8 +8,28 @@
 .footer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     border-bottom: 1px solid var(--cor-principal);
     background-color: var(--cor-secundaria);
     color: var(--azul-escuro);
+    gap: 1rem;
+    padding: 1rem 2rem; 
+}
+
+.logo-icon {
+    margin-right: auto;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+    flex-direction: column;
+    padding: 0.5rem 0;
+}
+
+.social-media svg {
+    width: 24px;  /* Defina a largura desejada */
+    height: 24px; /* Defina a altura desejada */
 }
