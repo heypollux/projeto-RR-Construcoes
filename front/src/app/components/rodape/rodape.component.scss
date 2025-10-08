@@ -13,23 +13,98 @@
     border-bottom: 1px solid var(--cor-principal);
     background-color: var(--cor-secundaria);
     color: var(--azul-escuro);
-    gap: 1rem;
-    padding: 1rem 2rem; 
+    gap: 1rem; 
+    padding: 1.5rem 2rem 1rem;
+}
+
+.footer-top-border {
+    display: flex;
+    width: 100%;
+}
+
+.footer-content {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Alinha o topo dos itens com o topo do container */
+    justify-content: space-between;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* COLUNA 1: Logo e Mídias Sociais */
+.logo-social {
+    min-width: 200px;
 }
 
 .logo-icon {
-    margin-right: auto;
+    font-size: .98rem;
+    font-weight: bold;
 }
 
 .social-media {
     display: flex;
-    gap: 1rem;
-    margin-left: auto;
-    flex-direction: column;
-    padding: 0.5rem 0;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: var(--azul-claro);
+    }
+
+    svg {
+        color: var(--cor-principal);
+        padding: .24rem .2rem .26rem .26rem; /* Ajuste fino para centralizar o ícone */
+        width: 24px;
+        height: 24px;
+    }
 }
 
-.social-media svg {
-    width: 24px;  /* Defina a largura desejada */
-    height: 24px; /* Defina a altura desejada */
+/* COLUNA 2: Links de Navegação */
+.nav-links {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    padding-top: 0;
+    flex-grow: 1;
+    justify-content: center;
+
+    a {
+        color: var(--azul-claro);
+        font-style: bold;
+        font-size: 1rem;
+        white-space: nowrap;
+        /* Evita quebra de linha nos links */
+    }
+}
+
+
+
+/* LINHA DE COPYRIGHT (Fundo) */
+.footer-copyright {
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+    gap: 1rem;
+    padding-top: 0.5rem; 
+    color: var(--cinza-escuro)
+}
+
+.developer-credit {
+    width: 100%;
+    text-align: center;
+    font-size: 0.65rem;
+    gap: 1rem;
+    color: var(--cinza-escuro)
 }

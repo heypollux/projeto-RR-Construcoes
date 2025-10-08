@@ -2,15 +2,17 @@
 :root {
 // cores principais:
 --cor-principal: #fefbf6; 
---cinza-claro: #e6e6e6;
---azul-negro: #1A1D29;
+--cor-secundaria: #faf8f5;
 
 // cores widgets:
+--azul-negro: #1A1D29;
 --azul-escuro: #16324d;
 --azul-claro: #58748f;
 
 // cores do footer e header:
---cor-secundaria: #faf8f5;
+--cinza-claro: #e6e6e6;
+--cinza-escuro: #9f9f9f;
+
 
 background-color: var(--cor-principal);
 }
@@ -37,3 +39,14 @@ background-color: var(--cor-principal);
   font-style: normal;
 }
 
+
+// classes de uso geral
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
