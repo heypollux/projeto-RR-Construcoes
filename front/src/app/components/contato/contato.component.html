@@ -21,14 +21,14 @@
     <div class="form-field-group">
     <label>
         <p class="form-label">Nome</p>
-        <input [(ngModel)]="contato.nome" placeholder="Seu nome" class="form-input-field" value="" />
+        <input [(ngModel)]="contato.nome" name="nome" placeholder="Seu nome" class="form-input-field"/>
     </label>
     </div>
 
     <div class="form-field-group">
         <label>
             <p class="form-label">Mensagem</p>
-            <textarea [(ngModel)]="contato.mensagem" placeholder="Sua mensagem" class="form-textarea-field"></textarea>
+            <textarea [(ngModel)]="contato.mensagem" name="mensagem" placeholder="Sua mensagem" class="form-textarea-field"></textarea>
         </label>
     </div>
 
@@ -71,3 +71,5 @@
     </div>
     </div>
 </main>
+
+<app-rodape></app-rodape>

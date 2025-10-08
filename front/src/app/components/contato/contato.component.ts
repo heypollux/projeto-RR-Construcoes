@@ -10,11 +10,13 @@ import ContatoMessage from 'src/app/classes/ContatoMessage';
 export class ContatoComponent {
   constructor(private toastr: ToastrService) {}
 
-  numeroTelefone: string = '+55 (11) 95292-4797';
+  numeroTelefone: string = '5511952924797';
 
   contato: ContatoMessage = new ContatoMessage();
 
   enviarWhatsapp() {
+
+    console.log(this.contato);
 
     if (!this.validarInput(this.contato.nome, 'Por favor, insira seu nome.')) {
       return;

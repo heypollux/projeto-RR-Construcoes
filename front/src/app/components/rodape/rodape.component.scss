@@ -1,0 +1,13 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-footer {
+    background-color: #333;
+    color: var(--azul-negro);
+    text-align: center;
+    padding: 20px 0;
+}
