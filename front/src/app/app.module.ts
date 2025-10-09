@@ -14,6 +14,7 @@ import { RodapeComponent } from './components/rodape/rodape.component';
 import { ProjetosComponent } from './components/projetos/projetos.component';
 import { CardProjetoComponent } from './components/shared/card-projeto/card-projeto.component';
 import { SobreComponent } from './components/sobre/sobre.component';
+import { DetalhesProjetosComponent } from './components/detalhes-projetos/detalhes-projetos.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SobreComponent } from './components/sobre/sobre.component';
     RodapeComponent,
     ProjetosComponent,
     CardProjetoComponent,
-    SobreComponent
+    SobreComponent,
+    DetalhesProjetosComponent
   ],
   imports: [
     BrowserModule,
