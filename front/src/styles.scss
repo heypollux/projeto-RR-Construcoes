@@ -1,38 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-// cores principais:
---cor-principal: #fefbf6; 
---cor-secundaria: #faf8f5;
+  // cores principais:
+  --cor-principal: #fefbf6;
+  --cor-secundaria: #faf8f5;
 
-// cores widgets:
---azul-negro: #1A1D29;
---azul-escuro: #16324d;
---azul-claro: #58748f;
+  // cores widgets:
+  --azul-negro: #1A1D29;
+  --azul-escuro: #16324d;
+  --azul-claro: #667585;
 
-// cores do footer e header:
---cinza-claro: #e6e6e6;
---cinza-escuro: #9f9f9f;
+  // cores do footer e header:
+  --cinza-claro: #e6e6e6;
+  --cinza-escuro: #9f9f9f;
 
 
-background-color: var(--cor-principal);
+  background-color: var(--cor-principal);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    /* Garante que o texto seja legível em navegadores modernos */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    
+  margin: 0;
+  padding: 0;
+  /* Garante que o texto seja legível em navegadores modernos */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
 }
 
 //fontes padrão:
-.josefin-sans { //titulos
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.josefin-sans { //corpo
+// .josefin-sans {
+//   //titulos
+//   font-family: "Josefin Sans", sans-serif;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+.josefin-sans {
+  //corpo
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -40,7 +43,7 @@ background-color: var(--cor-principal);
 }
 
 
-// classes de uso geral
+// display flex
 
 .flex {
   display: flex;
@@ -49,4 +52,24 @@ background-color: var(--cor-principal);
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.felx-1 {
+  flex: 1;
+}
+
+
+// estilos para P
+
+.title {
+  color: var(--azul-escuro);
+  font-feature-settings: 'dlig' on;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.text-azul-claro {
+  color: var(--azul-claro);
 }

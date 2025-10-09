@@ -1,0 +1,23 @@
+
+
+.container-projetos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 1400px;
+
+}
+
+.container-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card-item {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,16 @@
+<div class="container-projetos">
+
+  <p class="title">Nossos Projetos</p>
+
+  <p class="text-azul-claro">Explore a galeria de projetos concluídos, demonstrando a qualidade e a diversidade do nosso trabalho</p>
+
+  <div class="container-cards">
+
+    <div class="card-item" *ngFor="let projeto of projetos">
+      <app-card-projeto *ngIf="projeto.titulo" [projeto]="projeto"></app-card-projeto>
+    </div>
+
+
+  </div>
+
+</div>

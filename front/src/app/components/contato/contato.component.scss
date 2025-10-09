@@ -1,7 +1,7 @@
 /* Estilos do Conteúdo Principal da Página (área central da página) */
 .content-wrapper {
     display: flex;
-    padding: 0; 
+    padding: 0;
     justify-content: center;
     align-items: flex-start;
     width: 100%;
@@ -18,7 +18,7 @@
 }
 
 .coluna-metade {
-    flex: 3; 
+    flex: 3;
     padding: 30px;
     min-width: 300px;
 
@@ -39,26 +39,17 @@
 
 .info-mapa-coluna {
     display: flex;
-    flex-direction: column; 
-    gap: 24px; /* Adiciona um bom espaçamento vertical entre as seções (como entre as Infos e o Mapa) */
+    flex-direction: column;
+    gap: 24px;
+    /* Adiciona um bom espaçamento vertical entre as seções (como entre as Infos e o Mapa) */
     flex: 2;
     align-self: stretch;
-}
-
-/* Estilos do título da seção de contato */
-.contact-title {
-    color: var(--azul-escuro);
-    font-feature-settings: 'dlig' on;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 40px;
 }
 
 /* Estilos da descrição da seção de contato */
 .contact-description {
     align-self: stretch;
-    color: var(--azul-escuro);
+    color: var(--azul-claro);
     font-feature-settings: 'dlig' on;
     font-size: 16px;
     font-style: normal;
@@ -148,7 +139,18 @@
     align-items: center;
     border-radius: 8px;
     background: var(--azul-escuro);
-    color: var(--cor-principal)
+    color: var(--cor-principal);
+
+    &:hover {
+        box-shadow: 0 9px 19px 0 #0000001a, 0 35px 35px 0 #00000017, 0 80px 48px 0 #0000000d, 0 142px 57px 0 #00000003, 0 221px 62px 0 #00000000;
+        border-radius: 10px;
+        transition: 300ms;
+        background-color: var(--cinza-claro);
+        border: 1px solid var(--azul-escuro);
+        color: var(--azul-escuro);
+    }
+
+
 }
 
 .truncate {
@@ -174,7 +176,7 @@
 
 .info-description {
     display: flex;
-    color: var(--azul-escuro);
+    color: var(--azul-claro);
     font-feature-settings: 'dlig' on;
     font-size: 16px;
     font-style: normal;
@@ -188,7 +190,7 @@
     flex-direction: column;
     align-items: flex-start;
     align-self: stretch;
-    color: var(--azul-escuro);
+    color: var(--azul-claro);
     font-feature-settings: 'dlig' on;
     font-size: 15px;
     font-style: normal;
@@ -198,8 +200,8 @@
 
 /* Estilos do Mapa Incorporado */
 .mapa-container {
-    position: relative; 
-    padding-bottom: 65%; 
+    position: relative;
+    padding-bottom: 65%;
     height: 0;
     overflow: hidden;
     border-radius: 15px;
@@ -214,12 +216,11 @@
 }
 
 .mapa-container iframe {
-    filter: grayscale(50%) invert(8%);
-    position: absolute; 
+    filter: grayscale(30%) invert(8%);
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     border: none;
 }
-

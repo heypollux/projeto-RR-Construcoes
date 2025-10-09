@@ -13,7 +13,7 @@
     border-bottom: 1px solid var(--cor-principal);
     background-color: var(--cor-secundaria);
     color: var(--azul-escuro);
-    gap: 1rem; 
+    gap: 1rem;
     padding: 1.5rem 2rem 1rem;
 }
 
@@ -26,7 +26,8 @@
     flex: 1;
     display: flex;
     flex-direction: row;
-    align-items: flex-start; /* Alinha o topo dos itens com o topo do container */
+    align-items: flex-start;
+    /* Alinha o topo dos itens com o topo do container */
     justify-content: space-between;
 }
 
@@ -63,7 +64,8 @@
 
     svg {
         color: var(--cor-principal);
-        padding: .24rem .2rem .26rem .26rem; /* Ajuste fino para centralizar o ícone */
+        padding: .22rem .2rem .26rem .26rem;
+        /* Ajuste fino para centralizar o ícone */
         width: 24px;
         height: 24px;
     }
@@ -89,15 +91,32 @@
     }
 }
 
+/* Linha de contatos */
+.footer-contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: .05rem;
+    padding-top: 0;
+    justify-content: flex-end;
+    width: 100%;
 
+}
+
+.contact {
+    font-size: small;
+    text-align: end;
+    color: var(--azul-claro)
+
+}
 
 /* LINHA DE COPYRIGHT (Fundo) */
 .footer-copyright {
     width: 100%;
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     gap: 1rem;
-    padding-top: 0.5rem; 
+    padding-top: 0.5rem;
     color: var(--cinza-escuro)
 }
 
