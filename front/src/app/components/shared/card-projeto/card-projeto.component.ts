@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import Projeto from '../../../classes/Projeto';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-projeto',
@@ -7,6 +8,9 @@ import Projeto from '../../../classes/Projeto';
   styleUrls: ['./card-projeto.component.scss']
 })
 export class CardProjetoComponent {
+  constructor(
+    private router: Router
+  ){}
 
   @Input() projeto: Projeto = {
     titulo: "Projeto",
@@ -15,5 +19,9 @@ export class CardProjetoComponent {
     link: "#",
     assets: []
   };
+
+  Navegar() {
+    this.router.navigate([`/projetos/detalhes/${this.projeto.link}`]);
+  }
 
 }

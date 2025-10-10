@@ -3,36 +3,36 @@
     "titulo": "Casa Moderna",
     "descricao": "Projeto de casa moderna com design contemporâneo, focado em sustentabilidade e conforto.",
     "imagem": "assets/img/projetos/casaverde.jpg",
-    "link": "#"
+    "link": "casa-moderna"
   },
   {
     "titulo": "Academia",
     "descricao": "Construção de edifício comercial com foco em eficiência energética e design inovador.",
     "imagem": "assets/img/projetos/academia.jpg",
-    "link": "#"
+    "link": "academia"
   },
   {
     "titulo": "Reforma Residencial",
     "descricao": "Reforma completa de residência, modernizando espaços e melhorando a funcionalidade.",
     "imagem": "assets/img/projetos/painel.jpg",
-    "link": "#"
+    "link": "reforma-residencial"
   },
   {
     "titulo": "Piscina Condominial",
     "descricao": "Construção de galpão industrial com alta capacidade e tecnologia avançada.",
     "imagem": "assets/img/projetos/piscina.jpg",
-    "link": "#"
+    "link": "piscina-condominial"
   },
   {
     "titulo": "Salão de Festas Condominial",
     "descricao": "Desenvolvimento de condomínio residencial com áreas de lazer e sustentabilidade.",
     "imagem": "assets/img/projetos/salaogourmet.jpg",
-    "link": "#"
+    "link": "sala-de-festas"
   },
   {
     "titulo": "Sobrados Residenciais",
     "descricao": "Projeto de infraestrutura urbana com foco em acessibilidade e sustentabilidade.",
     "imagem": "assets/img/projetos/sobrados.jpg",
-    "link": "#"
+    "link": "sobrados-residenciais"
   }
 ]

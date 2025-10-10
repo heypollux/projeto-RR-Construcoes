@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import Projeto from '../classes/Projeto';
 
 @Injectable({
@@ -14,5 +14,13 @@ export class ProjetosService {
 
   getProjetos(): Observable<Projeto[]> {
     return this.http.get<Projeto[]>(this.projetosUrl);
+  }
+
+  getProjetoPorLink(link: string): Observable<Projeto | undefined> {
+    return this.getProjetos().pipe(
+      map(projetos =>
+        projetos.find(p => p.link === link)
+      )
+    );
   }
 }

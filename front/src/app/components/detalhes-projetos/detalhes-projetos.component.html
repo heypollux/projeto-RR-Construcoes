@@ -1,27 +1,27 @@
 <div class="container-main">
 
     <div class="main-titles">
-        <h1>Casa Moderna</h1>
-        <p class="description">Rua das flores, 123, Cidade - SP</p>
+        <div>
+            <h1>{{ projeto.titulo  }}</h1>
+            <p class="description">Rua das flores, 123, Cidade - SP</p>
+        </div>
 
-        <div class="gallery-grid">
-            <div class="gallery-item-large">
+
+        <div class="gallery-container">
+            <div class="gallery-img-large flex-1">
                 <img alt="Vista principal da casa reformada" class="gallery-img"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0Iuhg3UbedbtJ7syutaf6el-eJKsSVoX4YdmN9lCgXPBcuRnV12uQ44rg2h_NsCxQUB8eAcRVbocKKBo72v9dWtXQf_adnfVYzLxWdcPpIBU4BqPKOG1Tb1TSmSw4u7zfHc8Q1vWiKu75JCISIJBj8PTI1izsA3q35-GhYsE05qHf4tWB647b0mW4F7msljNRhy7FsndEuiQiDcihTWmVv3uEldLfoma_-a70QsKk01Z6e1l6Mda1UPTgoAYaVNBne_i8A7pZSnUs" />
+                    [src]="projeto.imagem" />
             </div>
 
-            <div class="gallery-small-images">
-            <img alt="Interior da sala de estar" class="gallery-img"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKLFV1hvPbVSmkOnCifekz5Xi8voxCLY1kSHTHBuPxrIOk-mwfsO7AKsnsHw5a1FwUOdotcvxMSOkUMhKmfDR2ao50HWZGdw5yb02c1Sex8tv771qVKaZUqB-Z_ecZ_rBA9xKmhVsc7vAiY9abUE8p96eOcpG9TN0slk9FytkCZBPCMhlGMH9YtqFTxEQ7zkZ6qfHL5lnMbOJEmB0qgMPnNW9VfeE_jQ46nyN9a2xFZw-yRepbFT5LMELZH6EYe-SSQOo50Fhm7QRP" />
-            <img alt="Cozinha moderna" class="gallery-img"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpTq7jI6562SKubYMVhkwGsSOhiiHAXaAdYMEC9Owl16DJSNWzyFvRQY7iMFzRIh49C5mBVwEdBvwAkgxGlkLIxSH2KBcaQNzv4JKBLKfY-GEI0Ne9wYmOlcpoPVnE9f-x6vxuscDUIxSuoob31Bi423Br8_LkSgblnLgQ6LslEnsJcsqJrCShTl0NArVkQNb4Y5aghdAohA8vns1yxh3owGhoXVzTPkdG_ewJ3eivaMVA9YlZTmBM4WESSgcLkYas5fS4LJDLjsmU" />
-            <img alt="Banheiro reformado" class="gallery-img"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCxdQgYYWkaW4nv0NtdQq4B8otwqT25yIdxTPjc9Khv79n7hoQ3Z9jPriNzpLBawSvjXmVZzivdf0GRPqOo4cWW3bSm_TvaT9t7BCWKTBZVxstdKb3RjOfpEyzzF9_iS3fdfEdad0GoU3YIngyO6Nw-z3zL7pQ0HdPzFEPcJgmd_hLlaJ4PThkUr_G7fpZ_rROYVbjSkBbJejopOX1gmoRi_3EceQFyKaQMdJMFyWtL8mUrYUdzBjWfpaqwfgFQc8IswswG7ahM5wp" />
-            <img alt="Detalhe da decoração" class="gallery-img"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuATmmSJUsSAwWKGm-LMuwg2WPYuS2DIUpiFcHVgN7Qbo1-rX68qa4MOizftGnj-4WBUqE1T-6GUjxPZN-8xCr2s8x3mVB8QFGpPbLbrs2LCVdfUUuvjSPydF7KUV4uhb-gQnNQFcA8696_OAmw7MPi7Ums1MJkADBho9a91GHYXVlOrvCb1J-PcPatSJxem7VtfSlSpttOqsS-luWx3uV9hB96XafcBuSeaUSsWrcf3d7-lEq19Yywhc-T4qqqD8j-chrSSQVz-OhQ6" />
+            <div class="gallery-img-small flex-1">
+                <img alt="Interior da sala de estar" class="gallery-img img-small" [src]="projeto.imagem" />
+                <img alt="Cozinha moderna" class="gallery-img img-small" [src]="projeto.imagem" />
+                <img alt="Banheiro reformado" class="gallery-img img-small" [src]="projeto.imagem" />
+                <img alt="Detalhe da decoração" class="gallery-img img-small" [src]="projeto.imagem" />
             </div>
         </div>
-    
+
+
         <div class="details-section">
             <div class="peoject-info">
 
@@ -39,18 +39,42 @@
                         <span class="spec-label">Tipo de Imóvel</span>
                         <span class="spec-value">Casa</span>
                     </div>
+                    <hr>
                     <div class="spec-item">
                         <span class="spec-label">Localização</span>
                         <span class="spec-value">Bairro Nobre, Cidade</span>
                     </div>
+                    <hr>
                     <div class="spec-item">
                         <span class="spec-label">Duração da Reforma</span>
                         <span class="spec-value">6 meses</span>
                     </div>
+                    <hr>
                     <div class="spec-item no-border">
                         <span class="spec-label">Orçamento</span>
                         <span class="spec-value">Sob Consulta</span>
                     </div>
+
+                    <!-- <form>
+                        <div class="form-field-group">
+                            <p class="form-label">Nome</p>
+                            <input name="nome" placeholder="Seu nome"
+                                class="form-input-field" />
+                        </div>
+
+                        <div class="form-field-group">
+                            <p class="form-label">Mensagem</p>
+                            <textarea name="mensagem" placeholder="Sua mensagem"
+                                class="form-textarea-field"></textarea>
+                        </div>
+
+                        <div class="form-submit-button-group">
+                            <button class="quote-button">
+                                <span class="truncate">Enviar</span>
+                            </button>
+                        </div>
+                    </form> -->
+
                 </div>
             </div>
         </div>
