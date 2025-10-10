@@ -15,6 +15,7 @@ import { ProjetosComponent } from './components/projetos/projetos.component';
 import { CardProjetoComponent } from './components/shared/card-projeto/card-projeto.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { DetalhesProjetosComponent } from './components/detalhes-projetos/detalhes-projetos.component';
+import { ServicosComponent } from './components/servicos/servicos.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DetalhesProjetosComponent } from './components/detalhes-projetos/detalh
     ProjetosComponent,
     CardProjetoComponent,
     SobreComponent,
-    DetalhesProjetosComponent
+    DetalhesProjetosComponent,
+    ServicosComponent
   ],
   imports: [
     BrowserModule,
