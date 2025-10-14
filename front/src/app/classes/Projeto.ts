@@ -3,5 +3,5 @@ export default class Projeto {
   descricao: string;
   imagem: string;
   link: string;
-  assets: string[];
+  caminho_pasta: string;
 }

@@ -3,7 +3,8 @@
     "titulo": "Casa Moderna",
     "descricao": "Projeto de casa moderna com design contemporâneo, focado em sustentabilidade e conforto.",
     "imagem": "assets/img/projetos/casaverde.jpg",
-    "link": "casa-moderna"
+    "link": "casa-moderna",
+    "caminho_pasta": "casa_moderna"
   },
   {
     "titulo": "Academia",
