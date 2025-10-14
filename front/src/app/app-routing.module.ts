@@ -9,7 +9,7 @@ import { ServicosComponent } from './components/servicos/servicos.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'inicio',
     component: HomeComponent
   },
   {
@@ -29,7 +29,7 @@ const routes: Routes = [
     component: SobreComponent
   },
   {
-    path: 'sevicos',
+    path: 'servicos',
     component: ServicosComponent
   }
 ];
