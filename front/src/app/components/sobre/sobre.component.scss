@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-
+/* configurações da primeira parte da tela*/
 .container-1 {
 
     display: flex;
@@ -75,6 +75,7 @@
     border: 1px solid var(--azul-claro);
 }
 
+/* configurações da segunda parte(texto, sumário, etc..) */
 .container-2 {
     display: flex;
     flex-direction: column;
@@ -82,29 +83,7 @@
     margin: 0 auto;
     padding: 5rem 0;
 }
-
-.text-section {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2.4rem 10rem;
-    font-size: 1rem;
-    line-height: 30px;
-    color: var(--cinza-escuro);
-
-
-    p {
-        font-size: 1rem;
-    }
-}
-
-.title-h2 {
-    font-size: 20px;
-    color: var(--azul-escuro);
-    font-weight: bold;
-    padding-bottom: .3rem;
-}
-
+ /* "sumariozinho" */
 .divisory {
     display: flex;
     flex-direction: row;
@@ -125,4 +104,27 @@
         color: var(--cinza-claro);
         text-decoration: underline;
     }
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.4rem 10rem;
+    font-size: 1rem;
+    line-height: 30px;
+    color: var(--cinza-escuro);
+
+
+    p {
+        font-size: 1rem;
+        line-height: 20px;
+    }
+}
+
+.title-h2 {
+    font-size: 20px;
+    color: var(--azul-escuro);
+    font-weight: bold;
+    padding-bottom: .3rem;
 }
