@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-.footer {
+.container {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -15,9 +15,10 @@
     color: var(--azul-escuro);
     gap: 1rem;
     padding: 1.5rem 2rem 1rem;
+    padding-bottom: 2rem;
 }
 
-.footer-top-border {
+.footer-main {
     display: flex;
     width: 100%;
 }
@@ -27,14 +28,6 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    /* Alinha o topo dos itens com o topo do container */
-    justify-content: space-between;
-}
-
-.footer-col {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
 }
 
 /* COLUNA 1: Logo e Mídias Sociais */
@@ -126,4 +119,5 @@
     font-size: 0.65rem;
     gap: 1rem;
     color: var(--cinza-escuro)
+    
 }
