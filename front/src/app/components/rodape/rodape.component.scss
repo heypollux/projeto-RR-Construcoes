@@ -2,10 +2,9 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-.container {
+:host {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -14,8 +13,10 @@
     background-color: var(--cor-secundaria);
     color: var(--azul-escuro);
     gap: 1rem;
-    padding: 1.5rem 2rem 1rem;
-    padding-bottom: 2rem;
+    width: 100%;
+    padding: .5rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer-main {
@@ -31,10 +32,6 @@
 }
 
 /* COLUNA 1: Logo e Mídias Sociais */
-.logo-social {
-    min-width: 200px;
-}
-
 .logo-icon {
     font-size: .98rem;
     font-weight: bold;
@@ -49,8 +46,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 30px;
-        height: 30px;
         border-radius: 50%;
         background-color: var(--azul-claro);
     }
@@ -74,6 +69,7 @@
     padding-top: 0;
     flex-grow: 1;
     justify-content: center;
+    transition: 400ms;
 
     a {
         color: var(--azul-claro);
@@ -82,30 +78,30 @@
         white-space: nowrap;
         /* Evita quebra de linha nos links */
     }
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 /* Linha de contatos */
 .footer-contact {
-    flex: 1;
     display: flex;
     flex-direction: column;
+    flex: 1;
     gap: .05rem;
     padding-top: 0;
     justify-content: flex-end;
-    width: 100%;
-
 }
 
 .contact {
-    font-size: small;
+    font-size: .7rem;
     text-align: end;
     color: var(--azul-claro)
-
 }
 
 /* LINHA DE COPYRIGHT (Fundo) */
 .footer-copyright {
-    width: 100%;
     text-align: center;
     font-size: 0.65rem;
     gap: 1rem;
@@ -114,10 +110,12 @@
 }
 
 .developer-credit {
-    width: 100%;
     text-align: center;
     font-size: 0.65rem;
     gap: 1rem;
     color: var(--cinza-escuro)
-    
+}
+
+.heart {
+    color: red;
 }
