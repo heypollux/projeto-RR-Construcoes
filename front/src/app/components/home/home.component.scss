@@ -4,20 +4,24 @@
     margin: 0;
 }
 
-.container {
+.container1 {
+    margin: 0 auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 3rem;
     gap: 1rem;
     position: relative;
 }
 
-/* Configurações da ilustração, btn etc*/ 
+/* Configurações da ilustração, btn etc*/
 .container-face {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 1rem;
 }
 
 .face {
@@ -56,6 +60,4 @@
 }
 
 /* Configurações da prévia da história */
-.container-historia {
-    
-}
+.container-historia {}
