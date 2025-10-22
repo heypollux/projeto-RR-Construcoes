@@ -86,9 +86,14 @@
 
 .description-historia {
     padding-top: .6rem;
+    padding-bottom: 1rem;
     color: var(--cinza-escuro);
 }
 
 .btn-sobre {
-    color: var(--azul-claro);
+    border: 1px solid;
+    border-color: var(--cinza-escuro);
+    border-radius: .3rem;
+    padding: .3rem;
+    color: var(--cinza-escuro);
 }
