@@ -1,0 +1,61 @@
+/* configurações gerais */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    gap: 1rem;
+    position: relative;
+}
+
+/* Configurações da ilustração, btn etc*/ 
+.container-face {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.face {
+    flex: 1;
+    flex-direction: column;
+}
+
+.slogan {
+    color: var(--azul-escuro);
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 5.6rem;
+}
+
+.btn-contato {
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+    background-color: var(--azul-escuro);
+    border-radius: 2rem;
+    transition: 400ms;
+
+    &:hover {
+        box-shadow: 0 9px 19px 0 #0000001a, 0 35px 35px 0 #00000017, 0 80px 48px 0 #0000000d, 0 142px 57px 0 #00000003, 0 221px 62px 0 #00000000;
+        border-radius: 2rem;
+        transition: 300ms;
+        background-color: var(--cinza-claro);
+        border: 1px solid var(--azul-escuro);
+        color: var(--azul-escuro);
+    }
+}
+
+.img {
+    flex: 1;
+}
+
+/* Configurações da prévia da história */
+.container-historia {
+    
+}
