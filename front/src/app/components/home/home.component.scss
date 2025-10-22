@@ -11,20 +11,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
-    gap: 1rem;
+    padding: 2.5rem;
+    gap: 9rem;
     position: relative;
 }
 
 /* Configurações da ilustração, btn etc*/
-.container-face {
+.container-text {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 1rem;
 }
 
-.face {
+.text {
     flex: 1;
     flex-direction: column;
 }
@@ -33,7 +33,7 @@
     color: var(--azul-escuro);
     font-weight: 700;
     font-size: 4rem;
-    line-height: 5.6rem;
+    line-height: 4.4rem;
 }
 
 .btn-contato {
@@ -60,4 +60,35 @@
 }
 
 /* Configurações da prévia da história */
-.container-historia {}
+.container-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+}
+
+.historia-img {
+    flex: 4;
+}
+
+.container-historia {
+    flex: 6;
+    flex-direction: column;
+}
+
+.title-historia {
+    color: var(--azul-escuro);
+    font-weight: 700;
+    font-size: 3.7rem;
+    line-height: 3.3rem;
+    padding-bottom: .6rem;
+}
+
+.description-historia {
+    padding-top: .6rem;
+    color: var(--cinza-escuro);
+}
+
+.btn-sobre {
+    color: var(--azul-claro);
+}
