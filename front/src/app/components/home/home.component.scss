@@ -193,15 +193,55 @@
 }
 
 .container4{
-    margin: 0 auto;
-    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    background-color: var(--cor-secundaria);
 }
 
 .container-servicos {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    padding: 3rem;
+    gap: 3rem;
 }
+
+.titles {
+    padding: 2rem;
+    color: var(--azul-escuro);
+    font-size: 3rem;
+    font-weight: 700;
+
+    p {
+        color: var(--cinza-escuro);
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+}
+
+.container-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.card-item {
+    width: 20rem;
+    height: 20rem;
+    padding: 1.25rem;
+    border: 1px solid var(--azul-claro);
+    border-radius: 1rem;
+    background-color: var(--azul-claro);
+
+    .icon svg {
+        width: 3rem;
+        height: 3rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
