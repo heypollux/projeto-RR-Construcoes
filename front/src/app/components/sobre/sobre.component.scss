@@ -21,7 +21,7 @@
 }
 
 .container-slogan {
-    flex: 5;
+    flex: 4;
     display: flex;
     flex-direction: column;
     gap: 2.6rem;
@@ -29,7 +29,7 @@
 }
 
 .container-img {
-    flex: 3;
+    flex: 4;
 }
 
 .title-section {
@@ -51,7 +51,7 @@
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
-    color: var(--azul-claro);
+    color: var(--cinza-escuro);
 }
 
 .btn-explore {
@@ -68,8 +68,8 @@
 
 .btn-explore:hover {
     background-color: var(--cinza-claro);
-    color: var(--azul-claro);
-    border: 1px solid var(--azul-claro);
+    color: var(--cinza-escuro);
+    border: 1px solid var(--cinza-escuro);
 }
 
 /* configurações da segunda parte(texto, sumário, etc..) */
@@ -94,11 +94,11 @@
 
 .btn-divisory {
     padding: .5rem;
-    color: var(--azul-claro);
+    color: var(--cinza-escuro);
     transition: 300ms;
 
     &:hover {
-        color: var(--cinza-claro);
+        color: var(--azul-claro);
         text-decoration: underline;
     }
 }
