@@ -49,11 +49,11 @@
 
     &:hover {
         box-shadow: 0 9px 19px 0 #0000001a, 0 35px 35px 0 #00000017, 0 80px 48px 0 #0000000d, 0 142px 57px 0 #00000003, 0 221px 62px 0 #00000000;
-        border-radius: 2rem;
-        transition: 300ms;
         background-color: var(--cinza-claro);
         border: 1px solid var(--azul-escuro);
         color: var(--azul-escuro);
+
+        transition: 300ms;
     }
 }
 
@@ -114,12 +114,15 @@
     border-color: var(--cinza-escuro);
     padding: .3rem;
     color: var(--cinza-escuro);
+    transition: 400ms;
 
-     &:hover {
+    &:hover {
         box-shadow: 0 9px 19px 0 #0000001a, 0 35px 35px 0 #00000017, 0 80px 48px 0 #0000000d, 0 142px 57px 0 #00000003, 0 221px 62px 0 #00000000;
-        transition: 300ms;
+        background-color: var(--cinza-claro);
         border: 1px solid var(--azul-escuro);
         color: var(--azul-escuro);
+
+        transition: 300ms;
     }
 }
 
@@ -135,9 +138,9 @@
 }
 
 .container-projeto {
-    position: relative; 
-    width: 100%; 
-    overflow: hidden; 
+    position: relative;
+    width: 100%;
+    overflow: hidden;
     padding: 3rem;
     background-color: var(--azul-claro);
 }
@@ -153,27 +156,27 @@
     position: absolute;
     z-index: 10;
     bottom: 47%;
-    right: 8%; 
-    
+    right: 8%;
+
     padding: 1.5rem;
-    width: 26rem; 
+    width: 26rem;
     height: 11rem;
     border-radius: 1rem;
-    background-color: var(--azul-escuro); 
+    background-color: var(--azul-escuro);
     opacity: 0.82;
 }
 
 .galeria-text h3 {
-    color: var(--cor-secundaria); 
+    color: var(--cor-secundaria);
     font-size: 1.1rem;
 }
 
 .btn-projetos {
-    position: absolute; 
+    position: absolute;
     z-index: 10;
-    bottom: 40%; 
+    bottom: 40%;
     right: 30.8%;
-    
+
     color: var(--azul-escuro);
     font-weight: 500;
     border: 1.98px solid var(--azul-escuro);
@@ -181,23 +184,29 @@
     background-color: var(--cinza-claro);
     opacity: 0.6;
     padding: .5rem;
-    
+    transition: 400ms;
+
     &:hover {
-        box-shadow: 2rem #000;
-        transition: 500ms;
-        border: 1px solid var(--cinza-escuro);
-        color: var(--cinza-escuro);
+        box-shadow: 0 9px 19px 0 #0000001a, 0 35px 35px 0 #00000017, 0 80px 48px 0 #0000000d, 0 142px 57px 0 #00000003, 0 221px 62px 0 #00000000;
+        background-color: var(--cor-principal);
+        border: 1px solid var(--azul-escuro);
+        color: var(--azul-escuro);
+        opacity: 0.8;
+
+        transition: 300ms;
     }
 
     cursor: pointer;
 }
 
-.container4{
+.container4 {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     width: 100%;
+
+    padding-bottom: 4rem;
     background-color: var(--cor-secundaria);
 }
 
@@ -205,13 +214,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; 
+    width: 100%;
     padding: 3rem;
     gap: 3rem;
 }
 
 .titles {
-    padding: 2rem;
+    padding: 1rem;
     color: var(--azul-escuro);
     font-size: 3rem;
     font-weight: 700;
@@ -227,16 +236,43 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 4rem;
 }
 
 .card-item {
-    width: 20rem;
-    height: 20rem;
+    width: 17rem;
+    height: 17rem;
     padding: 1.25rem;
-    border: 1px solid var(--azul-claro);
+    color: var(--azul-claro);
+    border: 1px solid var(--azul-escuro);
     border-radius: 1rem;
-    background-color: var(--azul-claro);
+    background-color: var(--azul-escuro);
+    transition: 400ms;
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 1rem;
+        font-weight: 300;
+        color: var(--cinza-claro);
+    }
+
+    &:hover {
+        box-shadow: 0 9px 19px 0 #0000001a, 0 35px 35px 0 #00000017, 0 80px 48px 0 #0000000d, 0 142px 57px 0 #00000003, 0 221px 62px 0 #00000000;
+        background-color: var(--cor-principal);
+        border: 1px solid var(--azul-claro);
+        color: var(--azul-escuro);
+
+        transition: 300ms;
+
+        p {
+            color: var(--azul-escuro);
+        }
+    }
 
     .icon svg {
         width: 3rem;
@@ -244,4 +280,3 @@
         padding-bottom: 1.5rem;
     }
 }
-
