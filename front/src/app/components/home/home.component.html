@@ -1,4 +1,4 @@
-<div class="container1">
+<div class="container1 scroll-hidden" #container1Ref>
 
     <div class="container-text">
 
@@ -24,7 +24,7 @@
 
 </div>
 
-<div class="container2">
+<div class="container2 scroll-hidden" #container2Ref id="secao-historia">
 
     <div class="container-main">
 
@@ -66,7 +66,7 @@
             </section>
 
             <a>
-                <button routerLink="/sobre" class="btn-sobre">
+                <button (click)="scrollToElement('secao-historia')" routerLink="/sobre" class="btn-sobre">
                     Ler mais &gt;
                 </button>
             </a>
@@ -77,7 +77,7 @@
 
 </div>
 
-<div class="container3">
+<div class="container3 scroll-hidden" #container3Ref id="secao-projetos">
 
     <div class="container-projeto">
 
@@ -95,7 +95,7 @@
         </div>
 
         <a>
-            <button routerLink="/projetos" class="btn-projetos">
+            <button (click)="scrollToElement('secao-projetos')" routerLink="/projetos" class="btn-projetos">
                 Ver mais &gt;
             </button>
         </a>
@@ -104,7 +104,7 @@
 
 </div>
 
-<div class="container4">
+<div class="container4 scroll-hidden" #container4Ref>
 
     <div class="container-servicos">
 
@@ -168,7 +168,7 @@
 
 </div>
 
-<div class="container5">
+<div class="container5 scroll-hidden" #container5Ref>
 
     <div class="container-feedback1">
 
