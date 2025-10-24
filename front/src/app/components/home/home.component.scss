@@ -28,7 +28,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
@@ -37,6 +36,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
     gap: 1rem;
     background-color: var(--azul-claro);
 }
@@ -52,6 +52,11 @@
     font-weight: 700;
     font-size: 4rem;
     line-height: 4.4rem;
+}
+
+.link-contato {
+    display: block; /* Garante que a margem seja aplicada corretamente */
+    margin-top: 2rem; /* Ajuste o valor para o espaçamento desejado */
 }
 
 .btn-contato {
