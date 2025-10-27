@@ -82,45 +82,43 @@
 <div class="container3 scroll-hidden" #container3Ref id="secao-projetos">
 
     <div class="container-projeto" *ngIf="projetos.length > 0">
-        
+
         <!-- Slider navigation arrows -->
         <button class="slider-arrow slider-arrow-left" (click)="prevSlide(); startAutoPlay()" aria-label="Anterior">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
             </svg>
         </button>
 
         <button class="slider-arrow slider-arrow-right" (click)="nextSlide(); startAutoPlay()" aria-label="Próximo">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                <path fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
             </svg>
         </button>
 
         <!-- Slider image container -->
         <div class="galeria-foto">
-            <img [src]="getCurrentImage()" [alt]="getCurrentProjeto()?.titulo || 'Projeto'" 
-                 (load)="onImageLoad($event)">
+            <img [src]="getCurrentImage()" [alt]="getCurrentProjeto()?.titulo || 'Projeto'"
+                (load)="onImageLoad($event)">
         </div>
 
         <!-- Overlay text with description -->
         <div class="galeria-text" *ngIf="getCurrentProjeto()">
-            <h3>{{ getCurrentProjeto()?.descricao }}</h3>
+            <h3>{{ getCurrentProjeto()?.titulo }} </h3>
+            <p>{{ getCurrentProjeto()?.descricao }}</p>
         </div>
 
         <!-- Navigation button -->
-        <a>
-            <button (click)="scrollToElement('secao-projetos')" routerLink="/projetos" class="btn-projetos">
-                Ver mais &gt;
-            </button>
-        </a>
+        <button (click)="navigateToProjectDetails()" class="btn-projetos">
+            Ver mais &gt;
+        </button>
 
         <!-- Slide indicators -->
         <div class="slider-indicators">
-            <button 
-                *ngFor="let projeto of projetos; let i = index" 
-                class="indicator" 
-                [class.active]="i === currentSlideIndex"
-                (click)="goToSlide(i)"
+            <button *ngFor="let projeto of projetos; let i = index" class="indicator"
+                [class.active]="i === currentSlideIndex" (click)="goToSlide(i)"
                 [attr.aria-label]="'Ir para slide ' + (i + 1)">
             </button>
         </div>
@@ -195,45 +193,53 @@
 
 <div class="container5 scroll-hidden" #container5Ref>
 
-    <div class="container-feedback1">
-
-        <div class="card-feedback">
-
-            <div class="perfil-img">
-                <img src="/assets/img/homepage/4.png" alt="Foto de perfil">
-            </div>
-
-            <p>
-                "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text,
-                and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
-            </p>
-
-            <section>
-                <p class="name">Fulana de Tal</p>
-                <p> - emprego X/ fulana@email.com</p>
-            </section>
-
-        </div>
+    <div class="title-feedback">
+        <h4>Avaliações positivas<br>
+            <span class="br-style">dos nossos clientes</span></h4>
     </div>
 
-    <div class="container-feedback2">
+    <div class="feedback-slider-container">
 
-        <div class="card-feedback">
+        <!-- Slider navigation arrows -->
+        <button class="feedback-slider-arrow feedback-slider-arrow-left"
+            (click)="prevFeedback(); startFeedbackAutoPlay()" aria-label="Anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+            </svg>
+        </button>
 
-            <div class="perfil-img">
-                <img src="/assets/img/homepage/4.png" alt="Foto de perfil">
+        <button class="feedback-slider-arrow feedback-slider-arrow-right"
+            (click)="nextFeedback(); startFeedbackAutoPlay()" aria-label="Próximo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+        </button>
+
+        <!-- Feedback slides container -->
+        <div class="feedback-slides-wrapper">
+            <div class="feedback-slide" *ngFor="let feedback of feedbacks; let i = index"
+                [class.active]="i === currentFeedbackIndex">
+                <div class="card-feedback">
+                    <div class="perfil-img">
+                        <img [src]="feedback.image" [alt]="feedback.name">
+                    </div>
+                    <p>"{{ feedback.comment }}"</p>
+                    <section>
+                        <p class="name">{{ feedback.name }}</p>
+                        <p> - {{ feedback.role }} / {{ feedback.email }}</p>
+                    </section>
+                </div>
             </div>
+        </div>
 
-            <p>
-                "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text,
-                and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
-            </p>
-
-            <section>
-                <p class="name">Fulana de Tal</p>
-                <p> - emprego X/ fulana@email.com</p>
-            </section>
-
+        <!-- Slide indicators -->
+        <div class="feedback-slider-indicators">
+            <button *ngFor="let feedback of feedbacks; let i = index" class="feedback-indicator"
+                [class.active]="i === currentFeedbackIndex" (click)="goToFeedback(i)"
+                [attr.aria-label]="'Ir para feedback ' + (i + 1)">
+            </button>
         </div>
 
     </div>
