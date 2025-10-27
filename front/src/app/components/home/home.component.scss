@@ -28,23 +28,38 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    padding-bottom: 5rem;
+    padding: 1rem 3rem;
+    margin-bottom: 5rem;
 }
 
 /* Configurações da ilustração, btn etc*/
 .container-text {
     display: flex;
+    
     flex-direction: row;
     align-items: center;
     width: 100%;
     gap: 1rem;
-    background-color: var(--azul-claro);
+    position: relative;
+}
+
+.background-block {
+    position: absolute;
+    bottom: 0  ;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-color:var(--azul-claro); /* Cor temporária - você pode mudar depois */
+    z-index: 1;
+    border-radius: 2rem;
 }
 
 .text {
     flex: 1;
     flex-direction: column;
     padding: 4rem;
+    position: relative;
+    z-index: 2;
 }
 
 .slogan {
@@ -80,6 +95,8 @@
 
 .img {
     flex: 1;
+    position: relative;
+    z-index: 2;
 }
 
 /* Inicio da seção do meio da página */

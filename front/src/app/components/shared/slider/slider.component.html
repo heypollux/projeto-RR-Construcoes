@@ -1,0 +1,16 @@
+<div *ngIf="isOpen" class="slider-container">
+  <button class="close-button" (click)="close()">×</button>
+  
+  <button class="nav-button nav-button-left" (click)="prevImage()">
+    <span>‹</span>
+  </button>
+  
+  <div class="image-container">
+    <img [src]="currentImage" class="main-image" alt="Projeto" />
+    <div class="image-counter">{{ currentIndex + 1 }} / {{ assets.length }}</div>
+  </div>
+  
+  <button class="nav-button nav-button-right" (click)="nextImage()">
+    <span>›</span>
+  </button>
+</div>

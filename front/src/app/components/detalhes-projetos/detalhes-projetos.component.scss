@@ -1,129 +1,176 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container-main {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: rem 1rem;
-    max-width: 80rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: rem 1rem;
+  max-width: 80rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .main-titles {
-    color: var(--azul-escuro);
-    font-size: 1.875rem;
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  color: var(--azul-escuro);
+  font-size: 1.875rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .description {
-    color: var(--cinza-escuro);
-    font-size: 1rem;
+  color: var(--cinza-escuro);
+  font-size: 1rem;
 }
 
 .section-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
 }
 
 .project-description {
-    color: var(--azul-claro);
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 2rem;
-    text-align: justify;
-    font-weight: 500;
-    font-size: 1.24rem;
+  color: var(--azul-claro);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  text-align: justify;
+  font-weight: 500;
+  font-size: 1.24rem;
 }
 
 .section-title {
-    color: var(--azul-escuro);
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+  color: var(--azul-escuro);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .project-specs {
-    font-size: 1.39rem;
-    display: flex;
-    flex-direction: column;
-    color: var(--azul-escuro);
-    border-radius: 20px;
-    padding: 1rem;
+  font-size: 1.39rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--azul-escuro);
+  border-radius: 20px;
+  padding: 1rem;
 
-    hr {
-        border-color: var(--cinza-claro);
-    }
+  hr {
+    border-color: var(--cinza-claro);
+  }
 }
 
 .spec-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .spec-label {
-    color: var(--azul-claro);
-    font-weight: 500;
+  color: var(--azul-claro);
+  font-weight: 500;
 }
 
 .spec-value {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .gallery-container {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    height: 37rem;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  height: 37rem;
+  flex-wrap: wrap;
 }
 
 .gallery-img-large {
-    min-width: 25rem;
-    max-height: -webkit-fill-available;
+  min-width: 25rem;
+  max-height: -webkit-fill-available;
 }
 
 .gallery-img-small {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    min-width: 25rem;
-    max-height: -webkit-fill-available;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  min-width: 25rem;
+  max-height: -webkit-fill-available;
+
 
 }
 
 /* Estilo padrão para todas as imagens da galeria */
 .gallery-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* ESSENCIAL: Faz a imagem cobrir o espaço sem distorcer */
-    border-radius: 1rem; /* Bordas arredondadas */
-    cursor: pointer;
-    transition: opacity 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* ESSENCIAL: Faz a imagem cobrir o espaço sem distorcer */
+  border-radius: 1rem;
+  /* Bordas arredondadas */
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
 .img-small {
-    width: calc((100% - 1rem) / 2); //O espaço do container total (100%) menos o gap (.gallery-img-small) 
-    height: calc((100% - 1rem) / 2);
+  width: calc((100% - 1rem) / 2); //O espaço do container total (100%) menos o gap (.gallery-img-small)
+  height: calc((100% - 1rem) / 2);
 }
 
 
 /* Efeito de hover nas imagens (leve transparência) */
 .gallery-img:hover {
-    opacity: 0.9;
+  opacity: 0.9;
+}
+
+.image-overlay {
+  /* Posicionamento */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* O efeito "esbranquiçado" */
+  background-color: rgba(255, 255, 255, 0.7);
+
+  /* Centralização do texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Estilo do texto */
+  color: var(--azul-escuro); /* Recomendo usar sua variável de cor */
+  font-size: 2.5rem;         /* Ajuste o tamanho conforme necessário */
+  font-weight: 700;
+
+  /* Bônus: impede que o texto seja selecionado */
+  user-select: none;
+  
+  /* IMPORTANTE: permite que cliques passem através do overlay */
+  pointer-events: none;
+}
+
+.gallery-item-wrapper {
+  /* O mais importante: a âncora para o overlay */
+  position: relative;
+
+  /* O tamanho que antes estava na classe .img-small */
+  width: calc((100% - 1rem) / 2);
+  height: calc((100% - 1rem) / 2);
+
+  /* Para manter as bordas arredondadas */
+  border-radius: 1rem;
+  overflow: hidden;
+  
+  /* Cursor pointer para indicar que é clicável */
+  cursor: pointer;
 }

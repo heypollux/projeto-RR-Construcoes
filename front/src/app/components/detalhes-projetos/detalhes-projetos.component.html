@@ -9,18 +9,22 @@
 
         <div class="gallery-container">
             <div class="gallery-img-large flex-1">
-                <img alt="Vista principal da casa reformada" class="gallery-img"
-                    [src]="projeto.imagem" />
+                <img alt="Vista principal da casa reformada" class="gallery-img" [src]="projeto.assets[0]" (click)="OpenSlider()" />
             </div>
 
             <div class="gallery-img-small flex-1">
-                <img alt="Interior da sala de estar" class="gallery-img img-small" [src]="projeto.imagem" />
-                <img alt="Cozinha moderna" class="gallery-img img-small" [src]="projeto.imagem" />
-                <img alt="Banheiro reformado" class="gallery-img img-small" [src]="projeto.imagem" />
-                <img alt="Detalhe da decoração" class="gallery-img img-small" [src]="projeto.imagem" />
+
+                <img *ngFor="let imagem of projeto.assets | slice:1:4" class="gallery-img img-small" [src]="imagem"  (click)="OpenSlider()"/>
+
+                <div *ngIf="projeto.assets.length >= 5" class="gallery-img img-small last-img gallery-item-wrapper" (click)="OpenSlider()">
+                  <img alt="Detalhe da decoração" class="gallery-img " [src]="projeto.assets[3]" />
+
+                  <div class="image-overlay">
+                      <span >+{{ projeto.assets.length - 4 }}</span>
+                  </div>
+              </div>
             </div>
         </div>
-
 
         <div class="details-section">
             <div class="peoject-info">
@@ -80,3 +84,9 @@
         </div>
     </div>
 </div>
+
+<app-slider
+[assets]="projeto.assets"
+[isOpen]="isOpen"
+(closeSlider)="closeSlider()"
+></app-slider>

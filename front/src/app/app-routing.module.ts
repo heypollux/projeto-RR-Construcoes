@@ -9,6 +9,10 @@ import { ServicosComponent } from './components/servicos/servicos.component';
 
 const routes: Routes = [
   {
+    path: '',
+    component: HomeComponent
+  },
+  {
     path: 'inicio',
     component: HomeComponent
   },

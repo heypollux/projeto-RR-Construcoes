@@ -15,9 +15,9 @@ export class CardProjetoComponent {
   @Input() projeto: Projeto = {
     titulo: "Projeto",
     descricao: "Descrição do projeto",
-    imagem: "",
     link: "#",
-    caminho_pasta: ""
+    caminho_pasta: "",
+    assets: []
   };
 
   Navegar() {

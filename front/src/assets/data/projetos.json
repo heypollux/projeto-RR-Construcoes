@@ -2,38 +2,93 @@
   {
     "titulo": "Casa Moderna",
     "descricao": "Projeto de casa moderna com design contemporâneo, focado em sustentabilidade e conforto.",
-    "imagem": "assets/img/projetos/casaverde.jpg",
     "link": "casa-moderna",
-    "caminho_pasta": "casa_moderna"
+    "caminho_pasta": "casa_moderna",
+    "assets": [
+      "assets/img/projetos/casaverde.jpg",
+      "assets/img/projetos/casaverde.jpg",
+      "assets/img/projetos/casaverde.jpg",
+      "assets/img/projetos/casaverde.jpg",
+      "assets/img/projetos/casaverde.jpg",
+      "assets/img/projetos/casaverde.jpg",
+      "assets/img/projetos/casaverde.jpg",
+      "assets/img/projetos/casaverde.jpg",
+      "assets/img/projetos/casaverde.jpg",
+      "assets/img/projetos/casaverde.jpg"
+    ]
   },
   {
     "titulo": "Academia",
     "descricao": "Construção de edifício comercial com foco em eficiência energética e design inovador.",
-    "imagem": "assets/img/projetos/academia.jpg",
-    "link": "academia"
+    "link": "academia",
+    "assets": [
+      "assets/img/projetos/academia.jpg",
+      "assets/img/projetos/academia.jpg",
+      "assets/img/projetos/academia.jpg",
+      "assets/img/projetos/academia.jpg",
+      "assets/img/projetos/academia.jpg",
+      "assets/img/projetos/academia.jpg",
+      "assets/img/projetos/academia.jpg"
+    ]
   },
   {
     "titulo": "Reforma Residencial",
     "descricao": "Reforma completa de residência, modernizando espaços e melhorando a funcionalidade.",
-    "imagem": "assets/img/projetos/painel.jpg",
-    "link": "reforma-residencial"
+    "link": "reforma-residencial",
+    "assets": [
+      "assets/img/projetos/piscina.jpg",
+      "assets/img/projetos/painel.jpg",
+      "assets/img/projetos/academia.jpg",
+      "assets/img/projetos/painel.jpg",
+      "assets/img/projetos/painel.jpg",
+      "assets/img/projetos/painel.jpg",
+      "assets/img/projetos/painel.jpg",
+      "assets/img/projetos/painel.jpg",
+      "assets/img/projetos/painel.jpg",
+      "assets/img/projetos/painel.jpg",
+      "assets/img/projetos/painel.jpg"
+    ]
   },
   {
     "titulo": "Piscina Condominial",
     "descricao": "Construção de galpão industrial com alta capacidade e tecnologia avançada.",
-    "imagem": "assets/img/projetos/piscina.jpg",
-    "link": "piscina-condominial"
+    "link": "piscina-condominial",
+    "assets": [
+      "assets/img/projetos/piscina.jpg",
+      "assets/img/projetos/piscina.jpg",
+      "assets/img/projetos/piscina.jpg",
+      "assets/img/projetos/piscina.jpg",
+      "assets/img/projetos/piscina.jpg",
+      "assets/img/projetos/piscina.jpg",
+      "assets/img/projetos/piscina.jpg"
+    ]
   },
   {
     "titulo": "Salão de Festas Condominial",
     "descricao": "Desenvolvimento de condomínio residencial com áreas de lazer e sustentabilidade.",
-    "imagem": "assets/img/projetos/salaogourmet.jpg",
-    "link": "sala-de-festas"
+    "link": "sala-de-festas",
+    "assets": [
+      "assets/img/projetos/salaogourmet.jpg",
+      "assets/img/projetos/salaogourmet.jpg",
+      "assets/img/projetos/salaogourmet.jpg",
+      "assets/img/projetos/salaogourmet.jpg",
+      "assets/img/projetos/salaogourmet.jpg",
+      "assets/img/projetos/salaogourmet.jpg",
+      "assets/img/projetos/salaogourmet.jpg"
+    ]
   },
   {
     "titulo": "Sobrados Residenciais",
     "descricao": "Projeto de infraestrutura urbana com foco em acessibilidade e sustentabilidade.",
-    "imagem": "assets/img/projetos/sobrados.jpg",
-    "link": "sobrados-residenciais"
+    "link": "sobrados-residenciais",
+    "assets": [
+      "assets/img/projetos/sobrados.jpg",
+      "assets/img/projetos/sobrados.jpg",
+      "assets/img/projetos/sobrados.jpg",
+      "assets/img/projetos/sobrados.jpg",
+      "assets/img/projetos/sobrados.jpg",
+      "assets/img/projetos/sobrados.jpg",
+      "assets/img/projetos/sobrados.jpg"
+    ]
   }
 ]

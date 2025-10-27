@@ -22,6 +22,8 @@ export class DetalhesProjetosComponent {
 
   projeto: Projeto = new Projeto();
 
+  isOpen: boolean = false;
+
   async ngOnInit() {
     this.projetoLink = this.route.snapshot.params['projeto'];
 
@@ -50,5 +52,14 @@ export class DetalhesProjetosComponent {
     });
 
   }
+
+  OpenSlider() {
+    this.isOpen = true;
+  }
+
+  closeSlider() {
+    this.isOpen = false;
+  }
+
 
 }
