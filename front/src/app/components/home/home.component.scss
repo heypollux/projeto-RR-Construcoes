@@ -396,11 +396,12 @@
     width: 17rem;
     height: 17rem;
     padding: 1.25rem;
-    color: var(--azul-escuro);
+    color: var(--azul-negro);
     border: 1px solid var(--azul-claro);
     border-radius: 1rem;
     background-color: var(--azul-claro);
     transition: 400ms;
+    cursor: pointer;
 
     h2 {
         font-size: 1.5rem;
@@ -409,16 +410,15 @@
 
     p {
         font-size: 1rem;
-        font-weight: 300;
-        color: var(--cinza-escuro);
+        font-weight: 400;
+        color: var(--azul-escuro);
     }
 
     &:hover {
         box-shadow: 0 9px 19px 0 #0000001a, 0 35px 35px 0 #00000017, 0 80px 48px 0 #0000000d, 0 142px 57px 0 #00000003, 0 221px 62px 0 #00000000;
         background-color: var(--cor-principal);
-        border: 1px solid var(--azul-claro);
-        color: var(--azul-escuro);
-
+        border: 1px solid var(--cor-principal);
+        color: var(--cinza-escuro);
         transition: 300ms;
 
         p {
@@ -430,6 +430,20 @@
         width: 3rem;
         height: 3rem;
         padding-bottom: 1.5rem;
+    }
+}
+
+.btn-servicos2 {
+    color: var(--cinza-escuro);
+    font-size: .79rem;
+    margin-top: 1rem;
+    transition: 300ms;
+
+    &:hover {
+        text-decoration: underline;
+        color: var(--cinza-claro);
+
+        transition: 300ms;
     }
 }
 
