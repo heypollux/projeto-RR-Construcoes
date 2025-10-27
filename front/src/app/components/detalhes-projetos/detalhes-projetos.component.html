@@ -1,62 +1,65 @@
 <div class="container-main">
 
     <div class="main-titles">
-        <div>
-            <h1>{{ projeto.titulo  }}</h1>
+        <div class="container-title">
+            <h1>{{ projeto.titulo }}</h1>
             <p class="description">Rua das flores, 123, Cidade - SP</p>
         </div>
 
 
         <div class="gallery-container">
             <div class="gallery-img-large flex-1">
-                <img alt="Vista principal da casa reformada" class="gallery-img" [src]="projeto.assets[0]" (click)="OpenSlider()" />
+                <img alt="Vista principal da casa reformada" class="gallery-img" [src]="projeto.assets[0]"
+                    (click)="OpenSlider()" />
             </div>
 
             <div class="gallery-img-small flex-1">
 
-                <img *ngFor="let imagem of projeto.assets | slice:1:4" class="gallery-img img-small" [src]="imagem"  (click)="OpenSlider()"/>
+                <img *ngFor="let imagem of projeto.assets | slice:1:4" class="gallery-img img-small" [src]="imagem"
+                    (click)="OpenSlider()" />
 
-                <div *ngIf="projeto.assets.length >= 5" class="gallery-img img-small last-img gallery-item-wrapper" (click)="OpenSlider()">
-                  <img alt="Detalhe da decoração" class="gallery-img " [src]="projeto.assets[3]" />
+                <div *ngIf="projeto.assets.length >= 5" class="gallery-img img-small last-img gallery-item-wrapper"
+                    (click)="OpenSlider()">
+                    <img alt="Detalhe da decoração" class="gallery-img " [src]="projeto.assets[3]" />
 
-                  <div class="image-overlay">
-                      <span >+{{ projeto.assets.length - 4 }}</span>
-                  </div>
-              </div>
+                    <div class="image-overlay">
+                        <span>+{{ projeto.assets.length - 4 }}</span>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="details-section">
-            <div class="peoject-info">
+
+            <div class="project-info">
 
                 <h2 class="section-title">Sobre a Reforma</h2>
                 <p class="project-description"> {{ projeto.descricao_detalhada || "-" }} </p>
+
+            </div>
+
+            <div class="project-specs">
                 <h2 class="section-title">Detalhes do Projeto</h2>
 
-                <div class="project-specs">
-                    <div class="spec-item">
-                        <span class="spec-label">Tipo de Obra</span>
-                        <span class="spec-value">{{ projeto.tipo_de_obra || "Sem informações" }}</span>
-                    </div>
-                    <hr>
-                    <div class="spec-item">
-                        <span class="spec-label">Localização</span>
-                        <span class="spec-value">{{ projeto.localizacao || "Sem informações"}}</span>
-                    </div>
-                    <hr>
-                    <div class="spec-item">
-                        <span class="spec-label">Duração da Reforma</span>
-                        <span class="spec-value">{{ projeto.duracao || "Sem informações"}}</span>
-                    </div>
-                
+                <div class="spec-item">
+                    <span class="spec-label">Tipo de Obra</span>
+                    <span class="spec-value">{{ projeto.tipo_de_obra || "Sem informações" }}</span>
                 </div>
+                <hr>
+                <div class="spec-item">
+                    <span class="spec-label">Localização</span>
+                    <span class="spec-value">{{ projeto.localizacao || "Sem informações"}}</span>
+                </div>
+                <hr>
+                <div class="spec-item">
+                    <span class="spec-label">Duração da Reforma</span>
+                    <span class="spec-value">{{ projeto.duracao || "Sem informações"}}</span>
+                </div>
+
             </div>
+
         </div>
     </div>
 </div>
 
-<app-slider
-[assets]="projeto.assets"
-[isOpen]="isOpen"
-(closeSlider)="closeSlider()"
-></app-slider>
+<app-slider [assets]="projeto.assets" [isOpen]="isOpen" (closeSlider)="closeSlider()"></app-slider>
