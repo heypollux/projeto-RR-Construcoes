@@ -81,26 +81,49 @@
 
 <div class="container3 scroll-hidden" #container3Ref id="secao-projetos">
 
-    <div class="container-projeto">
+    <div class="container-projeto" *ngIf="projetos.length > 0">
+        
+        <!-- Slider navigation arrows -->
+        <button class="slider-arrow slider-arrow-left" (click)="prevSlide(); startAutoPlay()" aria-label="Anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+        </button>
 
+        <button class="slider-arrow slider-arrow-right" (click)="nextSlide(); startAutoPlay()" aria-label="Próximo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </button>
+
+        <!-- Slider image container -->
         <div class="galeria-foto">
-            <img src="/assets/img/homepage/2.jpg" alt="foto-projeto">
+            <img [src]="getCurrentImage()" [alt]="getCurrentProjeto()?.titulo || 'Projeto'" 
+                 (load)="onImageLoad($event)">
         </div>
 
-        <div class="galeria-text">
-            <h3>
-                Acabamento Impecável? É com a RR CONSTRUÇÕES.
-                Profissionalismo e dedicação em cada etapa da sua obra. Do planejamento à entrega, seu projeto nas
-                melhores mãos.
-                De uma olhada em nossos outros projetos!
-            </h3>
+        <!-- Overlay text with description -->
+        <div class="galeria-text" *ngIf="getCurrentProjeto()">
+            <h3>{{ getCurrentProjeto()?.descricao }}</h3>
         </div>
 
+        <!-- Navigation button -->
         <a>
             <button (click)="scrollToElement('secao-projetos')" routerLink="/projetos" class="btn-projetos">
                 Ver mais &gt;
             </button>
         </a>
+
+        <!-- Slide indicators -->
+        <div class="slider-indicators">
+            <button 
+                *ngFor="let projeto of projetos; let i = index" 
+                class="indicator" 
+                [class.active]="i === currentSlideIndex"
+                (click)="goToSlide(i)"
+                [attr.aria-label]="'Ir para slide ' + (i + 1)">
+            </button>
+        </div>
 
     </div>
 
