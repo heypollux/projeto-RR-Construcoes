@@ -1,5 +1,6 @@
 import { Component, HostListener, ViewChild, ElementRef, OnInit, OnDestroy } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
+import { Router } from '@angular/router';
 import { ProjetosService } from '../../services/projetos.service';
 import Projeto from '../../classes/Projeto';
 import { Subscription } from 'rxjs';
@@ -20,11 +21,41 @@ export class HomeComponent implements OnInit, OnDestroy {
   windowHeight: number = 0;
   projetos: Projeto[] = [];
   currentSlideIndex: number = 0;
+  currentFeedbackIndex: number = 0;
   private autoPlayInterval: any;
+  private feedbackAutoPlayInterval: any;
   private projetosSubscription!: Subscription;
+
+  feedbacks = [
+    {
+      id: 1,
+      name: "João Silva",
+      role: "Cliente",
+      email: "joao@email.com",
+      comment: "Trabalho excepcional! A equipe foi muito profissional e entregou exatamente o que combinamos.",
+      image: "/assets/img/homepage/4.png"
+    },
+    {
+      id: 2,
+      name: "Maria Santos",
+      role: "Arquiteta",
+      email: "maria@email.com",
+      comment: "Parceria incrível! A qualidade dos materiais e a atenção aos detalhes superaram minhas expectativas.",
+      image: "/assets/img/homepage/4.png"
+    },
+    {
+      id: 3,
+      name: "Pedro Costa",
+      role: "Engenheiro",
+      email: "pedro@email.com",
+      comment: "Projeto concluído no prazo e com excelente acabamento. Recomendo!",
+      image: "/assets/img/homepage/4.png"
+    }
+  ];
 
   constructor(
     private scroller: ViewportScroller,
+    private router: Router,
     private projetosService: ProjetosService
   ) { }
 
@@ -32,11 +63,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.windowHeight = window.innerHeight;
     setTimeout(() => this.checkVisibility(), 0); 
     this.carregarProjetos();
+    this.startFeedbackAutoPlay();
   }
 
   ngOnDestroy(): void {
     if (this.autoPlayInterval) {
       clearInterval(this.autoPlayInterval);
+    }
+    if (this.feedbackAutoPlayInterval) {
+      clearInterval(this.feedbackAutoPlayInterval);
     }
     if (this.projetosSubscription) {
       this.projetosSubscription.unsubscribe();
@@ -134,6 +169,51 @@ export class HomeComponent implements OnInit, OnDestroy {
     setTimeout(() => {
       this.scroller.scrollToAnchor(elementId);
     }, 50); 
+  }
+
+  navigateToProjectDetails(): void {
+    const currentProjeto = this.getCurrentProjeto();
+    if (currentProjeto && currentProjeto.link) {
+      this.router.navigate(['/projetos/detalhes', currentProjeto.link]);
+    }
+  }
+
+  // Feedback slider methods
+  startFeedbackAutoPlay(): void {
+    if (this.feedbackAutoPlayInterval) {
+      clearInterval(this.feedbackAutoPlayInterval);
+    }
+    this.feedbackAutoPlayInterval = setInterval(() => {
+      this.nextFeedback();
+    }, 4000);
+  }
+
+  stopFeedbackAutoPlay(): void {
+    if (this.feedbackAutoPlayInterval) {
+      clearInterval(this.feedbackAutoPlayInterval);
+      this.feedbackAutoPlayInterval = null;
+    }
+  }
+
+  nextFeedback(): void {
+    if (this.feedbacks.length > 0) {
+      this.currentFeedbackIndex = (this.currentFeedbackIndex + 1) % this.feedbacks.length;
+    }
+  }
+
+  prevFeedback(): void {
+    if (this.feedbacks.length > 0) {
+      this.currentFeedbackIndex = (this.currentFeedbackIndex - 1 + this.feedbacks.length) % this.feedbacks.length;
+    }
+  }
+
+  goToFeedback(index: number): void {
+    this.currentFeedbackIndex = index;
+    this.startFeedbackAutoPlay();
+  }
+
+  getCurrentFeedback(): any {
+    return this.feedbacks[this.currentFeedbackIndex];
   }
 
 }
