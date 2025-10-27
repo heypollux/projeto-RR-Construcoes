@@ -3,6 +3,10 @@
     "titulo": "Casa Moderna",
     "descricao": "Projeto de casa moderna com design contemporâneo, focado em sustentabilidade e conforto.",
     "link": "casa-moderna",
+    "descricao_detalhada": "Esta reforma completa transformou uma casa antiga em um lar moderno e elegante. O projeto incluiu a renovação da fachada, a modernização dos interiores, a instalação de novos sistemas elétricos e hidráulicos, e a criação de um novo paisagismo. O resultado é uma casa com design contemporâneo, espaços amplos e acabamentos de alta qualidade.",
+    "tipo_de_obra": "Casa",
+    "localizacao": "XXXX, XXXXX - XXX",
+    "duracao": "6 meses",
     "caminho_pasta": "casa_moderna",
     "assets": [
       "assets/img/projetos/casaverde.jpg",

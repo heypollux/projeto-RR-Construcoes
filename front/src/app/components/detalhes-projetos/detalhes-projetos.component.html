@@ -30,55 +30,25 @@
             <div class="peoject-info">
 
                 <h2 class="section-title">Sobre a Reforma</h2>
-                <p class="project-description">
-                    Esta reforma completa transformou uma casa antiga em um lar moderno e elegante. O projeto incluiu a
-                    renovação da fachada, a modernização dos interiores, a instalação de novos sistemas elétricos e
-                    hidráulicos, e a criação de um novo paisagismo. O resultado é uma casa com design contemporâneo,
-                    espaços amplos e acabamentos de alta qualidade.
-                </p>
+                <p class="project-description"> {{ projeto.descricao_detalhada || "-" }} </p>
                 <h2 class="section-title">Detalhes do Projeto</h2>
 
                 <div class="project-specs">
                     <div class="spec-item">
-                        <span class="spec-label">Tipo de Imóvel</span>
-                        <span class="spec-value">Casa</span>
+                        <span class="spec-label">Tipo de Obra</span>
+                        <span class="spec-value">{{ projeto.tipo_de_obra || "Sem informações" }}</span>
                     </div>
                     <hr>
                     <div class="spec-item">
                         <span class="spec-label">Localização</span>
-                        <span class="spec-value">Bairro Nobre, Cidade</span>
+                        <span class="spec-value">{{ projeto.localizacao || "Sem informações"}}</span>
                     </div>
                     <hr>
                     <div class="spec-item">
                         <span class="spec-label">Duração da Reforma</span>
-                        <span class="spec-value">6 meses</span>
+                        <span class="spec-value">{{ projeto.duracao || "Sem informações"}}</span>
                     </div>
-                    <hr>
-                    <div class="spec-item no-border">
-                        <span class="spec-label">Orçamento</span>
-                        <span class="spec-value">Sob Consulta</span>
-                    </div>
-
-                    <!-- <form>
-                        <div class="form-field-group">
-                            <p class="form-label">Nome</p>
-                            <input name="nome" placeholder="Seu nome"
-                                class="form-input-field" />
-                        </div>
-
-                        <div class="form-field-group">
-                            <p class="form-label">Mensagem</p>
-                            <textarea name="mensagem" placeholder="Sua mensagem"
-                                class="form-textarea-field"></textarea>
-                        </div>
-
-                        <div class="form-submit-button-group">
-                            <button class="quote-button">
-                                <span class="truncate">Enviar</span>
-                            </button>
-                        </div>
-                    </form> -->
-
+                
                 </div>
             </div>
         </div>

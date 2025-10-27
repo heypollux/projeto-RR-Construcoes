@@ -38,12 +38,12 @@
 }
 
 .project-description {
-  color: var(--azul-claro);
+  color: var(--cinza-escuro);
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 2rem;
   text-align: justify;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.24rem;
 }
 
@@ -72,11 +72,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--cinza-claro)
 }
 
 .spec-label {
-  color: var(--azul-claro);
+  color: var(--cinza-escuro);
   font-weight: 500;
 }
 

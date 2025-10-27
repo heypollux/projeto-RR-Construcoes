@@ -4,4 +4,8 @@ export default class Projeto {
   link: string;
   caminho_pasta?: string;
   assets: string[];
+  descricao_detalhada: string;
+  tipo_de_obra: string;
+  localizacao: string;
+  duracao: string;
 }

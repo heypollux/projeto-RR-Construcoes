@@ -17,7 +17,11 @@ export class CardProjetoComponent {
     descricao: "Descrição do projeto",
     link: "#",
     caminho_pasta: "",
-    assets: []
+    assets: [],
+    descricao_detalhada: '',
+    tipo_de_obra: '',
+    localizacao: '',
+    duracao: ''
   };
 
   Navegar() {
