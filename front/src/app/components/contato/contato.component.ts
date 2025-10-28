@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { Subscription } from 'rxjs';
 import ContatoMessage from 'src/app/classes/ContatoMessage';
 
 @Component({
@@ -7,8 +8,42 @@ import ContatoMessage from 'src/app/classes/ContatoMessage';
   templateUrl: './contato.component.html',
   styleUrls: ['./contato.component.scss']
 })
-export class ContatoComponent {
-  constructor(private toastr: ToastrService) {}
+export class ContatoComponent implements OnInit {
+
+  // criar scroll reveal para as colunas
+  @ViewChild('colunaMetadeRef') colunaMetadeRef!: ElementRef;
+  @ViewChild('infoMapaColunaRef') infoMapaColunaRef!: ElementRef;
+
+  windowHeight: number = 0;
+
+  ngOnInit(): void {
+    this.windowHeight = window.innerHeight;
+    setTimeout(() => this.checkVisibility(), 0);
+  }
+  
+  @HostListener('window:scroll', [])
+  checkVisibility() {
+    this.animateElement(this.colunaMetadeRef.nativeElement);
+    this.animateElement(this.infoMapaColunaRef.nativeElement);
+  }
+
+  animateElement(element: HTMLElement): void {
+
+    if (!element || element.classList.contains('scroll-show')) {
+      return;
+    }
+
+    const elementTop = element.getBoundingClientRect().top;
+
+    const triggerPoint = this.windowHeight * 0.6;
+
+    if (elementTop < triggerPoint) {
+      element.classList.add('scroll-show');
+    }
+  }
+
+  // enviar mensagem para o whatsapp
+  constructor(private toastr: ToastrService) { }
 
   numeroTelefone: string = '5511952924797';
 

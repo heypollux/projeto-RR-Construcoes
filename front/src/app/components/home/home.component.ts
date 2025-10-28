@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-
+// scroll reveal para as seções
   @ViewChild('container1Ref') container1Ref!: ElementRef;
   @ViewChild('container2Ref') container2Ref!: ElementRef;
   @ViewChild('container3Ref') container3Ref!: ElementRef;
@@ -25,6 +25,47 @@ export class HomeComponent implements OnInit, OnDestroy {
   private autoPlayInterval: any;
   private feedbackAutoPlayInterval: any;
   private projetosSubscription!: Subscription;
+
+  @HostListener('window:scroll', [])
+  checkVisibility() {
+    
+    this.animateElement(this.container1Ref.nativeElement);
+    this.animateElement(this.container2Ref.nativeElement);
+    this.animateElement(this.container3Ref.nativeElement);
+    this.animateElement(this.container4Ref.nativeElement);
+    this.animateElement(this.container5Ref.nativeElement);
+  }
+
+  animateElement(element: HTMLElement): void {
+
+    if (!element || element.classList.contains('scroll-show')) {
+      return; 
+    }
+
+    const elementTop = element.getBoundingClientRect().top;
+    
+    const triggerPoint = this.windowHeight * 0.8; 
+
+    if (elementTop < triggerPoint) {
+      element.classList.add('scroll-show');
+    }
+  }
+  
+  scrollToElement(elementId: string): void {
+
+    setTimeout(() => {
+      this.scroller.scrollToAnchor(elementId);
+    }, 50); 
+  }
+
+  navigateToProjectDetails(): void {
+    const currentProjeto = this.getCurrentProjeto();
+    if (currentProjeto && currentProjeto.link) {
+      this.router.navigate(['/projetos/detalhes', currentProjeto.link]);
+    }
+  }
+
+  // feedback slider
 
   feedbacks = [
     {
@@ -136,45 +177,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     const img = event.target as HTMLImageElement;
     if (img) {
       img.style.opacity = '1';
-    }
-  }
-
-  @HostListener('window:scroll', [])
-  checkVisibility() {
-    
-    this.animateElement(this.container1Ref.nativeElement);
-    this.animateElement(this.container2Ref.nativeElement);
-    this.animateElement(this.container3Ref.nativeElement);
-    this.animateElement(this.container4Ref.nativeElement);
-    this.animateElement(this.container5Ref.nativeElement);
-  }
-
-  animateElement(element: HTMLElement): void {
-
-    if (!element || element.classList.contains('scroll-show')) {
-      return; 
-    }
-
-    const elementTop = element.getBoundingClientRect().top;
-    
-    const triggerPoint = this.windowHeight * 0.8; 
-
-    if (elementTop < triggerPoint) {
-      element.classList.add('scroll-show');
-    }
-  }
-  
-  scrollToElement(elementId: string): void {
-
-    setTimeout(() => {
-      this.scroller.scrollToAnchor(elementId);
-    }, 50); 
-  }
-
-  navigateToProjectDetails(): void {
-    const currentProjeto = this.getCurrentProjeto();
-    if (currentProjeto && currentProjeto.link) {
-      this.router.navigate(['/projetos/detalhes', currentProjeto.link]);
     }
   }
 
