@@ -1,6 +1,5 @@
 import { Component, HostListener, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { Subscription } from 'rxjs';
 import ContatoMessage from 'src/app/classes/ContatoMessage';
 
 @Component({

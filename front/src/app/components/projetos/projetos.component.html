@@ -1,12 +1,12 @@
 <div class="container-projetos">
 
-  <div class="container-texts">
+  <div class="container-texts scroll-hidden" #containerTextRef>
     <p class="title">Nossos Projetos</p>
 
     <p class="text-cinza-escuro">Explore a galeria de projetos concluídos, demonstrando a qualidade e a diversidade do nosso trabalho</p>
   </div>
 
-  <div class="container-cards">
+  <div class="container-cards scroll-hidden" #containerTextRef2>
 
     <div class="card-item" *ngFor="let projeto of projetos">
       <app-card-projeto *ngIf="projeto.titulo" [projeto]="projeto"></app-card-projeto>

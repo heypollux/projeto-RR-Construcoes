@@ -125,3 +125,18 @@
     font-weight: bold;
     padding-bottom: .3rem;
 }
+
+// Scroll Reveal
+.scroll-hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: none;
+}
+
+.scroll-show {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity 0.8s ease-out,
+        transform 0.8s ease-out;
+}

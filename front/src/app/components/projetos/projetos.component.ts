@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component , HostListener, ViewChild, ElementRef, OnInit} from '@angular/core';
 import { ProjetosService } from '../../services/projetos.service';
 import Projeto from '../../classes/Projeto';
 
@@ -8,6 +8,33 @@ import Projeto from '../../classes/Projeto';
   styleUrls: ['./projetos.component.scss']
 })
 export class ProjetosComponent implements OnInit {
+  // criar scroll reveal para as colunas
+  @ViewChild('containerTextRef') containerTextRef!: ElementRef;
+  @ViewChild('containerTextRef2') containerTextRef2!: ElementRef;
+
+  windowHeight: number = 0;
+
+  
+  @HostListener('window:scroll', [])
+  checkVisibility() {
+    this.animateElement(this.containerTextRef.nativeElement);
+    this.animateElement(this.containerTextRef2.nativeElement);
+  }
+
+  animateElement(element: HTMLElement): void {
+
+    if (!element || element.classList.contains('scroll-show')) {
+      return;
+    }
+
+    const elementTop = element.getBoundingClientRect().top;
+
+    const triggerPoint = this.windowHeight * 0.6;
+
+    if (elementTop < triggerPoint) {
+      element.classList.add('scroll-show');
+    }
+  }
 
   projetos: Projeto[] = [];
 
@@ -15,6 +42,9 @@ export class ProjetosComponent implements OnInit {
 
   ngOnInit(): void {
     this.carregarProjetos();
+
+    this.windowHeight = window.innerHeight;
+    setTimeout(() => this.checkVisibility(), 0); // scroll reveal
   }
 
   carregarProjetos(): void {
