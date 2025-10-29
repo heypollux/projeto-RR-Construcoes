@@ -7,17 +7,30 @@
     border-bottom: 1px solid var(--cor-secundaria);
     background-color: var(--cor-secundaria);
     padding: 12px 40px;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
 
+/* Container da logo e título */
+.logo-and-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    flex-shrink: 0;
 }
 
 /* Estilos da seção da logo no cabeçalho */
 .logo-icon {
     display: flex;
     align-items: center;
-    gap: 16px;
-    color: var(--azul-escuro);
-    width: 200px;
-    height: 50px;
+}
+
+.logo-icon img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
 }
 
 /* Estilos do título da empresa no cabeçalho */
@@ -35,9 +48,10 @@
 .header-nav-section {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: center;
     gap: 32px;
     flex: 1 0 0;
+    min-width: 0;
 }
 
 /* Estilos dos links de navegação */
@@ -46,6 +60,8 @@
     height: 40px;
     align-items: center;
     gap: 36px;
+    flex-wrap: wrap;
+    min-width: 0;
 }
 
 /* Estilos de cada link individual */
@@ -77,12 +93,193 @@
     background: var(--azul-escuro);
     color: var(--cor-principal);
     transition: 300ms;
-
     cursor: pointer;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .quote-button:hover {
     background-color: var(--cinza-claro);
     color: var(--azul-escuro);
     border: 1px solid var(--azul-escuro);
+}
+
+/* Responsividade do Cabeçalho */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .main-header {
+        padding: 12px 24px;
+    }
+    
+    .main-nav-links {
+        gap: 24px;
+    }
+    
+    .nav-link {
+        font-size: 13px;
+    }
+    
+    .quote-button {
+        margin-left: 16px;
+        padding: 0 12px;
+        min-width: 80px;
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 12px 16px;
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+    
+    .logo-and-title {
+        justify-content: center;
+        order: 1;
+    }
+    
+    .header-nav-section {
+        order: 2;
+        justify-content: center;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .main-nav-links {
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    
+    .nav-link {
+        font-size: 13px;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+        background-color: var(--azul-claro);
+        color: var(--azul-escuro);
+    }
+    
+    .quote-button {
+        order: 3;
+        margin-left: 0;
+        align-self: center;
+        min-width: 200px;
+    }
+}
+
+/* Mobile Medium */
+@media (max-width: 600px) {
+    .main-header {
+        padding: 10px 12px;
+        gap: 12px;
+    }
+    
+    .logo-and-title {
+        gap: 6px;
+    }
+    
+    .logo-icon img {
+        height: 28px;
+    }
+    
+    .company-title {
+        font-size: 16px;
+    }
+    
+    .main-nav-links {
+        gap: 16px;
+    }
+    
+    .nav-link {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    
+    .quote-button {
+        min-width: 180px;
+        height: 36px;
+        font-size: 13px;
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+    .main-header {
+        padding: 8px 10px;
+        gap: 10px;
+    }
+    
+    .logo-icon img {
+        height: 24px;
+    }
+    
+    .company-title {
+        font-size: 14px;
+    }
+    
+    .main-nav-links {
+        gap: 12px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-link {
+        font-size: 11px;
+        padding: 8px 16px;
+        width: 100%;
+        text-align: center;
+        max-width: 200px;
+    }
+    
+    .quote-button {
+        min-width: 160px;
+        height: 32px;
+        font-size: 12px;
+        padding: 0 8px;
+    }
+}
+
+/* Mobile Extra Small */
+@media (max-width: 360px) {
+    .main-header {
+        padding: 6px 8px;
+    }
+    
+    .logo-and-title {
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+    }
+    
+    .logo-icon img {
+        height: 20px;
+    }
+    
+    .company-title {
+        font-size: 12px;
+    }
+    
+    .main-nav-links {
+        gap: 8px;
+    }
+    
+    .nav-link {
+        font-size: 10px;
+        padding: 6px 12px;
+        max-width: 150px;
+    }
+    
+    .quote-button {
+        min-width: 140px;
+        height: 28px;
+        font-size: 11px;
+    }
 }
