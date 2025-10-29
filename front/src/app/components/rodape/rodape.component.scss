@@ -23,6 +23,7 @@
     grid-template-columns: 2fr 1fr 1.5fr;
     gap: 3rem;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
 
 /* Seção da Marca */
@@ -30,6 +31,8 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    min-width: 0;
+    flex: 1;
 }
 
 .footer-logo-section {
@@ -87,6 +90,11 @@
 }
 
 /* Seção de Navegação */
+.footer-nav {
+    min-width: 0;
+    flex: 1;
+}
+
 .footer-nav h4 {
     color: var(--azul-escuro);
     font-size: 1.1rem;
@@ -112,6 +120,11 @@
 }
 
 /* Seção de Contato */
+.footer-contact {
+    min-width: 0;
+    flex: 1;
+}
+
 .footer-contact h4 {
     color: var(--azul-escuro);
     font-size: 1.1rem;
@@ -154,6 +167,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    width: 100%;
 }
 
 .footer-copyright p {
@@ -188,6 +202,24 @@
 }
 
 /* Responsividade */
+/* Tablets */
+@media (max-width: 1024px) {
+    .footer-container {
+        padding: 2.5rem 1.5rem 1rem;
+    }
+    
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-contact {
+        grid-column: 1 / -1;
+        margin-top: 1rem;
+    }
+}
+
+/* Mobile Large */
 @media (max-width: 768px) {
     .footer-container {
         padding: 2rem 1rem 1rem;
@@ -202,13 +234,87 @@
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+        gap: 0.5rem;
     }
     
     .footer-logo-section {
         justify-content: center;
+        text-align: center;
     }
     
     .social-media {
         justify-content: center;
+    }
+    
+    .footer-nav {
+        text-align: center;
+    }
+    
+    .footer-contact {
+        text-align: center;
+    }
+    
+    .contact-info {
+        align-items: center;
+    }
+    
+    .contact-item {
+        justify-content: center;
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 1.5rem 0.75rem 1rem;
+    }
+    
+    .footer-main {
+        gap: 1.5rem;
+    }
+    
+    .footer-logo-section {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .company-name h3 {
+        font-size: 1.25rem;
+    }
+    
+    .company-name p {
+        font-size: 0.8rem;
+    }
+    
+    .social-media {
+        gap: 0.75rem;
+    }
+    
+    .social-media a {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .social-media svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .footer-nav h4,
+    .footer-contact h4 {
+        font-size: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    
+    .contact-item span {
+        font-size: 0.85rem;
+    }
+    
+    .footer-copyright p,
+    .developer-credit p {
+        font-size: 0.8rem;
     }
 }
