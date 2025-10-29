@@ -36,14 +36,14 @@
     "duracao": "18 meses",
     "caminho_pasta": "sobrado1",
     "assets": [
-      "assets/img/projetos/sobrtado1/8.jpg",
-      "assets/img/projetos/sobrtado1/2.jpg",
-      "assets/img/projetos/sobrtado1/3.jpg",
-      "assets/img/projetos/sobrtado1/4.jpg",
-      "assets/img/projetos/sobrtado1/5.jpg",
-      "assets/img/projetos/sobrtado1/6.jpg",
-      "assets/img/projetos/sobrtado1/7.jpg",
-      "assets/img/projetos/sobrtado1/1.jpg"
+      "assets/img/projetos/sobrado1/8.jpg",
+      "assets/img/projetos/sobrado1/2.jpg",
+      "assets/img/projetos/sobrado1/3.jpg",
+      "assets/img/projetos/sobrado1/4.jpg",
+      "assets/img/projetos/sobrado1/5.jpg",
+      "assets/img/projetos/sobrado1/6.jpg",
+      "assets/img/projetos/sobrado1/7.jpg",
+      "assets/img/projetos/sobrado1/1.jpg"
     ]
   },
   {
@@ -56,11 +56,11 @@
     "duracao": "3 meses",
     "caminho_pasta": "quadra",
     "assets": [
-      "assets/img/projetos/quadra/1.jpg",
-      "assets/img/projetos/quadra/2.jpg",
-      "assets/img/projetos/quadra/5.jpg",
-      "assets/img/projetos/quadra/6.jpg",
-      "assets/img/projetos/quadra/7.jpg"
+      "assets/img/projetos/quadra/quadra1.jpg",
+      "assets/img/projetos/quadra/quadra2.jpg",
+      "assets/img/projetos/quadra/quadra5.jpg",
+      "assets/img/projetos/quadra/quadra6.jpg",
+      "assets/img/projetos/quadra/quadra7.jpg"
     ]
     },
   {
@@ -110,14 +110,14 @@
     "duracao": "5 meses",
     "caminho_pasta": "piscina",
     "assets": [
-      "assets/img/projetos/piscina/2(1).jpg",
-      "assets/img/projetos/piscina/2(2).jpg",
-      "assets/img/projetos/piscina/2(3).jpg",
-      "assets/img/projetos/piscina/2(4).jpg",
-      "assets/img/projetos/piscina/2(5).jpg",
-      "assets/img/projetos/piscina/2(6).jpg",
-      "assets/img/projetos/piscina/2(7).jpg",
-      "assets/img/projetos/piscina/2(8).jpg"
+      "assets/img/projetos/piscina/piscina5.jpg",
+      "assets/img/projetos/piscina/piscina2.jpg",
+      "assets/img/projetos/piscina/piscina3.jpg",
+      "assets/img/projetos/piscina/piscina4.jpg",
+      "assets/img/projetos/piscina/piscina1.jpg",
+      "assets/img/projetos/piscina/piscina6.jpg",
+      "assets/img/projetos/piscina/piscina7.jpg",
+      "assets/img/projetos/piscina/piscina8.jpg"
     ]
   },
   {
