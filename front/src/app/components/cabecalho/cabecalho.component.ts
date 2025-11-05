@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./cabecalho.component.scss']
 })
 export class CabecalhoComponent {
+	isMenuOpen = false;
 
+	toggleMenu(): void {
+		this.isMenuOpen = !this.isMenuOpen;
+	}
+
+	closeMenu(): void {
+		this.isMenuOpen = false;
+	}
 }

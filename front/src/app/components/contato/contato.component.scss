@@ -163,6 +163,50 @@
     color: var(--cor-principal);
 }
 
+/* Responsividade - Contato */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        padding: 1.5rem;
+    }
+    .content-container {
+        max-width: 860px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 1rem 1rem 2rem 1rem;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .content-container {
+        max-width: 100%;
+    }
+    .coluna-metade,
+    .info-mapa-coluna {
+        width: 100%;
+        padding: 18px 12px;
+    }
+    .form-field-group {
+        width: 100%;
+    }
+    .form-textarea-field {
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-wrapper {
+        padding: 0.75rem 0.75rem 1.5rem 0.75rem;
+    }
+    .coluna-metade,
+    .info-mapa-coluna {
+        padding: 12px 8px;
+    }
+}
+
 /* Estilos da Seção de Informações de Contato */
 .info-title {
     color: var(--azul-escuro);

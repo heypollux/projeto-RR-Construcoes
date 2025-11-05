@@ -1,25 +1,48 @@
 <header class="main-header">
-    <div class="logo-and-title">
-        <div class="logo-icon">
-            <img src="assets/img/logo/logo-rrc.svg" alt="Logo">
-        </div>
-        <div class="company-title">
-            <a routerLink="/inicio">RR CONSTRUÇÕES</a>
-        </div>
-    </div>
+	<div class="logo-and-title">
+		<div class="logo-icon">
+			<img src="assets/img/logo/logo-rrc.svg" alt="Logo">
+		</div>
+		<div class="company-title">
+			<a routerLink="/inicio" (click)="closeMenu()">RR CONSTRUÇÕES</a>
+		</div>
+	</div>
 
-    <div class="header-nav-section"></div>
-    <div class="main-nav-links">
-        <a routerLink="/inicio" class="nav-link">Início</a>
-        <a routerLink="/servicos"  class="nav-link">Serviços</a>
-        <a routerLink="/projetos" class="nav-link">Projetos</a>
-        <a routerLink="/sobre" class="nav-link">Sobre</a>
-        <a routerLink="/contato" class="nav-link">Contato</a>
-    </div>
+	<!-- Botão Hamburguer (visível em telas pequenas) -->
+	<button
+		class="hamburger-button"
+		type="button"
+		aria-label="Abrir menu"
+		[attr.aria-expanded]="isMenuOpen"
+		(click)="toggleMenu()">
+		<span class="hamburger-bar"></span>
+		<span class="hamburger-bar"></span>
+		<span class="hamburger-bar"></span>
+	</button>
 
-    <hr>
+	<!-- Navegação desktop -->
+	<div class="header-nav-section"></div>
+	<nav class="main-nav-links desktop-only">
+		<a routerLink="/inicio" class="nav-link">Início</a>
+		<a routerLink="/servicos"  class="nav-link">Serviços</a>
+		<a routerLink="/projetos" class="nav-link">Projetos</a>
+		<a routerLink="/sobre" class="nav-link">Sobre</a>
+		<a routerLink="/contato" class="nav-link">Contato</a>
+	</nav>
 
-    <button class="quote-button">
-        <a class="truncate" href="https://wa.me/5511952924797?text=Olá, gostaria de solicitar um orçamento.">Solicitar Orçamento</a>
-    </button>
+	<hr class="desktop-only">
+
+	<button class="quote-button desktop-only">
+		<a class="truncate" href="https://wa.me/5511952924797?text=Olá, gostaria de solicitar um orçamento.">Solicitar Orçamento</a>
+	</button>
 </header>
+
+<!-- Menu Mobile deslizante -->
+<nav class="mobile-menu" [class.open]="isMenuOpen">
+	<a routerLink="/inicio" class="mobile-link" (click)="closeMenu()">Início</a>
+	<a routerLink="/servicos" class="mobile-link" (click)="closeMenu()">Serviços</a>
+	<a routerLink="/projetos" class="mobile-link" (click)="closeMenu()">Projetos</a>
+	<a routerLink="/sobre" class="mobile-link" (click)="closeMenu()">Sobre</a>
+	<a routerLink="/contato" class="mobile-link" (click)="closeMenu()">Contato</a>
+	<a class="mobile-quote" href="https://wa.me/5511952924797?text=Olá, gostaria de solicitar um orçamento." (click)="closeMenu()">Solicitar Orçamento</a>
+</nav>

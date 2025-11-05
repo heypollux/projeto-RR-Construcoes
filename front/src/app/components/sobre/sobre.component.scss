@@ -43,7 +43,7 @@
 .slogan {
     font-size: 80px;
     line-height: 92px;
-    font-weight: 600;
+    font-weight: 700;
     font-style: inherit;
 }
 
@@ -52,18 +52,21 @@
     line-height: 22px;
     font-weight: 400;
     color: var(--cinza-escuro);
+    text-align: justify;
 }
 
 .btn-explore {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     color: var(--cor-principal);
-    padding: 1rem;
-    border-radius: 3rem;
+    padding: .6rem .9rem;
+    border-radius: 2rem;
     background-color: var(--azul-escuro);
     transition: 500ms;
-
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-explore:hover {
@@ -111,11 +114,13 @@
     font-size: 1rem;
     line-height: 30px;
     color: var(--cinza-escuro);
+    text-align: justify;
 
 
     p {
         font-size: 1rem;
         line-height: 20px;
+        text-align: justify;
     }
 }
 
@@ -131,6 +136,74 @@
     opacity: 0;
     transform: translateY(50px);
     transition: none;
+}
+
+/* Responsividade - Sobre */
+@media (max-width: 1024px) {
+    .container-1 {
+        width: 85%;
+        padding: 3.5rem 0;
+    }
+    .container-main {
+        gap: 2rem;
+    }
+    .slogan {
+        font-size: 56px;
+        line-height: 66px;
+    }
+    .text-section {
+        padding: 2rem 6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-1 {
+        width: 92%;
+        padding: 2.5rem 0;
+    }
+    .container-main {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    /* Garantir texto antes da imagem no mobile */
+    .container-slogan { order: 1; }
+    .container-img { order: 2; }
+    .slogan {
+        font-size: 40px;
+        line-height: 48px;
+        text-align: center;
+    }
+    .description-slogan {
+        text-align: center;
+    }
+    /* Divisory horizontal rolável (row + scroll lateral) */
+    .divisory {
+        gap: 1rem;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        scroll-snap-type: x mandatory;
+    }
+    .btn-divisory {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        white-space: nowrap;
+    }
+    .text-section {
+        padding: 1.5rem 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slogan {
+        font-size: 32px;
+        line-height: 38px;
+    }
+    .text-section {
+        padding: 1rem 0.75rem;
+    }
 }
 
 .scroll-show {

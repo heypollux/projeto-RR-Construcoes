@@ -12,6 +12,48 @@
     box-sizing: border-box;
 }
 
+/* Botão hamburguer (oculto no desktop) */
+.hamburger-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background: transparent;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    /* Variáveis para controlar espessura e espaçamento (X perfeito) */
+    --bar-h: 2px;
+    --bar-gap: 4px;
+    gap: var(--bar-gap);
+    margin-top: 4px;
+}
+
+.hamburger-bar {
+    display: block;
+    width: 24px;
+    height: var(--bar-h);
+    background-color: var(--azul-escuro);
+    margin: 0;
+    transition: background-color 0.2s ease, transform 0.25s ease, opacity 0.2s ease;
+    transform-origin: center;
+}
+
+/* Animação do hamburguer em hover e quando aberto */
+.hamburger-button:hover .hamburger-bar:nth-child(1),
+.hamburger-button[aria-expanded="true"] .hamburger-bar:nth-child(1) {
+    transform: translateY(calc(var(--bar-h) + var(--bar-gap))) rotate(45deg);
+}
+
+.hamburger-button:hover .hamburger-bar:nth-child(2),
+.hamburger-button[aria-expanded="true"] .hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-button:hover .hamburger-bar:nth-child(3),
+.hamburger-button[aria-expanded="true"] .hamburger-bar:nth-child(3) {
+    transform: translateY(calc(-1 * (var(--bar-h) + var(--bar-gap)))) rotate(-45deg);
+}
+
 /* Container da logo e título */
 .logo-and-title {
     display: flex;
@@ -28,7 +70,7 @@
 }
 
 .logo-icon img {
-    height: 32px;
+    height: 40px;
     width: auto;
     object-fit: contain;
 }
@@ -37,11 +79,10 @@
 .company-title {
     color: var(--azul-escuro);
     font-feature-settings: 'dlig' on;
-    font-size: 18px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 23px;
-    /* 127.778% */
 }
 
 /* Estilos da seção de navegação no cabeçalho */
@@ -76,6 +117,7 @@
 
 .nav-link:hover {
     color: var(--cinza-claro);
+    text-decoration: underline;
 }
 
 /* Estilos do botão "Solicitar Orçamento" */
@@ -131,28 +173,32 @@
 @media (max-width: 768px) {
     .main-header {
         padding: 12px 16px;
-        flex-direction: column;
-        gap: 16px;
-        align-items: stretch;
+        gap: 12px;
+        align-items: center;
+        justify-content: flex-start;
     }
-    
-    .logo-and-title {
+
+    /* Mostrar botão hamburguer e esconder navegação desktop */
+    .hamburger-button {
+        display: flex;
+        align-items: center;
         justify-content: center;
         order: 1;
     }
-    
-    .header-nav-section {
-        order: 2;
-        justify-content: center;
-        flex-direction: column;
-        gap: 16px;
+
+    .desktop-only {
+        display: none !important;
     }
     
-    .main-nav-links {
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        height: auto;
+    /* Logo e título à direita no mobile */
+    .logo-and-title {
+        order: 2;
+        margin-left: auto;
+    }
+
+    /* Remove o espaçador para não interferir na separação */
+    .header-nav-section {
+        display: none;
     }
     
     .nav-link {
@@ -168,10 +214,7 @@
     }
     
     .quote-button {
-        order: 3;
-        margin-left: 0;
-        align-self: center;
-        min-width: 200px;
+        min-width: 180px;
     }
 }
 
@@ -187,11 +230,12 @@
     }
     
     .logo-icon img {
-        height: 28px;
+        height: 34px;
     }
     
     .company-title {
-        font-size: 16px;
+        font-size: 18px;
+        line-height: 24px;
     }
     
     .main-nav-links {
@@ -218,25 +262,12 @@
     }
     
     .logo-icon img {
-        height: 24px;
+        height: 30px;
     }
     
     .company-title {
-        font-size: 14px;
-    }
-    
-    .main-nav-links {
-        gap: 12px;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .nav-link {
-        font-size: 11px;
-        padding: 8px 16px;
-        width: 100%;
-        text-align: center;
-        max-width: 200px;
+        font-size: 16px;
+        line-height: 22px;
     }
     
     .quote-button {
@@ -260,11 +291,12 @@
     }
     
     .logo-icon img {
-        height: 20px;
+        height: 26px;
     }
     
     .company-title {
-        font-size: 12px;
+        font-size: 14px;
+        line-height: 20px;
     }
     
     .main-nav-links {
@@ -281,5 +313,61 @@
         min-width: 140px;
         height: 28px;
         font-size: 11px;
+    }
+}
+
+/* Menu Mobile - painel deslizante */
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: grid;
+        grid-auto-rows: minmax(44px, auto);
+        gap: 8px;
+        padding: 8px 16px 16px 16px;
+        background: var(--cor-secundaria);
+        border-bottom: 1px solid var(--cinza-claro);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .mobile-menu.open {
+        max-height: 320px;
+    }
+
+    .mobile-link {
+        color: var(--azul-escuro);
+        text-decoration: none;
+        font-size: 14px;
+        padding: 10px 8px;
+        border-radius: 6px;
+        transition: background-color 0.2s ease;
+    }
+
+    .mobile-link:hover {
+        background: var(--azul-claro);
+    }
+
+    .mobile-quote {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--azul-escuro);
+        color: var(--cor-principal);
+        text-decoration: none;
+        padding: 10px 12px;
+        border-radius: 8px;
+        margin-top: 4px;
+        font-weight: 600;
+    }
+}
+
+/* Ocultar hamburguer no desktop */
+@media (min-width: 769px) {
+    .hamburger-button {
+        display: none;
     }
 }

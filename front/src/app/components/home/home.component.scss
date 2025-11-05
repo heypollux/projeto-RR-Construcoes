@@ -102,6 +102,103 @@
     z-index: 2;
 }
 
+/* Responsividade - Home */
+@media (max-width: 1024px) {
+    .slogan {
+        font-size: 3.2rem;
+        line-height: 3.6rem;
+    }
+    .container2 {
+        gap: 6rem;
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+    }
+    .container-main {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container1 {
+        padding: 1rem 1.5rem;
+        margin-bottom: 3rem;
+    }
+    .container-text {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+    .text {
+        padding: 2rem 1.25rem;
+    }
+    .slogan {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        text-align: center;
+    }
+    .img img {
+        width: 100%;
+        max-width: 520px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .background-block {
+        height: 100%;
+        border-radius: 1.25rem;
+    }
+    .container2 {
+        padding: 1rem 1.5rem;
+        gap: 4rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+    .container2 .container-main {
+        display: flex;
+        flex-direction: column !important;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+    /* Foto no topo, textos abaixo */
+    .container2 .historia-img { order: 1 !important; }
+    .container2 .container-historia { order: 2 !important; }
+    .container2 .historia-img img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+    }
+    .title-historia {
+        font-size: 2.2rem;
+        line-height: 2.2rem;
+        text-align: center;
+    }
+    .description-historia {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .text {
+        padding: 1.25rem 0.75rem;
+    }
+    .slogan {
+        font-size: 1.9rem;
+        line-height: 2.2rem;
+    }
+    .btn-contato {
+        width: 100%;
+    }
+    .container2 {
+        gap: 2.5rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .title-historia {
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+}
+
 /* Inicio da seção do meio da página */
 .container2 {
     margin: 0 auto;
@@ -110,10 +207,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem 3rem;
+    padding: 1rem 0;
     gap: 9rem;
     position: relative;
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-bottom: 10rem;
 }
 
@@ -123,12 +220,17 @@
     flex-direction: row;
     align-items: center;
     gap: 3rem;
+    width: 100%;
+    padding: 0 3rem;
+    box-sizing: border-box;
 }
 
 .historia-img img {
-    flex: 1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
     border-radius: 1rem;
-    height: 24rem;
 }
 
 .container-historia {
@@ -139,15 +241,17 @@
 .title-historia {
     color: var(--azul-escuro);
     font-weight: 700;
-    font-size: 3.7rem;
-    line-height: 3.3rem;
+    font-size: 2.7rem;
+    line-height: 2.9rem;
     padding-bottom: .6rem;
+    text-align: justify;
 }
 
 .description-historia {
     padding-top: .6rem;
     padding-bottom: 1rem;
     color: var(--cinza-escuro);
+    text-align: justify;
 }
 
 .btn-sobre {
