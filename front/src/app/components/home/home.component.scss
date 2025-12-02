@@ -237,7 +237,7 @@
     position: absolute;
     z-index: 10;
     top: calc(50% + 25px + 0.5rem);
-    left: 5rem;
+    left: 3rem;
 
     padding: 1.5rem 2rem;
     max-width: 40%;
@@ -249,7 +249,7 @@
 
 .galeria-text h3 {
     color: var(--cor-principal);
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: bold;
     text-align: left;
     line-height: 1.3;
@@ -259,9 +259,9 @@
 
 .galeria-text p {
     color: var(--cor-secundaria);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: left;
-    line-height: 1.3;
+    line-height: 1.5;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
@@ -269,8 +269,9 @@
 .btn-projetos {
     position: absolute;
     z-index: 10;
-    top: calc(50% + 25px + 0.5rem + 8rem + 1rem);
-    left: 5rem;
+    /* Posiciona o botão alinhado ao bloco de texto, logo abaixo dele */
+    top: calc(50% + 25px + 0.5rem + 5.5rem);
+    left: 3rem;
 
     color: var(--cor-principal);
     font-weight: 500;
@@ -936,5 +937,18 @@
         padding: 0.35rem 0.85rem;
         font-size: 0.75rem;
         border-radius: 0.75rem;
+    }
+}
+
+/* Garantir posicionamento no DESKTOP (sem afetar o mobile) */
+@media (min-width: 769px) {
+    .galeria-text {
+        top: calc(50% + 25px + 0.5rem);
+        left: 3rem;
+    }
+
+    .btn-projetos {
+        transform: translateY(-330%);
+        left: 4rem;
     }
 }
