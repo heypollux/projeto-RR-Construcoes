@@ -83,6 +83,18 @@
     margin: 0 auto;
     padding: 5rem 0;
 }
+
+.sobre-escritorio {
+    width: 100%;
+    margin: 2rem 0;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+}
  /* "sumariozinho" */
 .divisory {
     display: flex;
@@ -144,6 +156,9 @@
         width: 85%;
         padding: 3.5rem 0;
     }
+    .container-2 {
+        padding: 4rem 0;
+    }
     .container-main {
         gap: 2rem;
     }
@@ -160,6 +175,9 @@
     .container-1 {
         width: 92%;
         padding: 2.5rem 0;
+    }
+    .container-2 {
+        padding: 3.5rem 0;
     }
     .container-main {
         flex-direction: column;
@@ -191,15 +209,31 @@
         scroll-snap-align: start;
         white-space: nowrap;
     }
+    .title-h2 {
+        font-size: 18px;
+    }
     .text-section {
         padding: 1.5rem 1.25rem;
+    }
+    .sobre-escritorio {
+        margin: 1.5rem 0;
     }
 }
 
 @media (max-width: 480px) {
+    .container-1 {
+        width: 95%;
+        padding: 2rem 0;
+    }
+    .container-2 {
+        padding: 3rem 0;
+    }
     .slogan {
         font-size: 32px;
         line-height: 38px;
+    }
+    .title-h2 {
+        font-size: 16px;
     }
     .text-section {
         padding: 1rem 0.75rem;
